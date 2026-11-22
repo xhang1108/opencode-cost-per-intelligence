@@ -5,7 +5,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = ('aa-models.json', 'go-limits.json')
 AA = json.load(open(os.path.join(BASE,'data','aa-models.json'),encoding='utf-8'))
 GO = json.load(open(os.path.join(BASE,'data','go-limits.json'),encoding='utf-8'))
-# Console pay-as-you-go discounts are a separate property from Go subscription pricing.
+# Console pay-as-you-go prices are the reference for the Go effective cost ratio.
 CONSOLE_PATH = os.path.join(BASE,'data','console-prices.json')
 CONSOLE = json.load(open(CONSOLE_PATH,encoding='utf-8')) if os.path.exists(CONSOLE_PATH) else {}
 PLAN_PRICE = 10.0
@@ -78,22 +78,20 @@ def match(name):
                 best = (gn, orig, rec)
     return best
 
-# Console discount lookup. Keys in console-prices.json are already normalized names.
+# Console price lookup. Keys in console-prices.json are already normalized names.
 console_norm = {norm(k): v for k, v in CONSOLE.items()}
-# AA Free API also carries list prices per 1M tokens (stored by fetch_aa.py since
-# 2026-11-22). Use that AA list price as the discount baseline when available
-# (below: only when 0 < console input <= AA input); otherwise fall back to the
-# verified discount_pct recorded in console-prices.json, i.e. the "(N% off)" label
-# that fetch_console.py cross-checked against the struck-through prices.
+# AA Free API list price per 1M input tokens (fetch_aa.py, since 2026-11-22).
+# Used to cross-check the page's struck-through list price, not as the label source.
 AA_PRICE = {m['slug']: (m.get('pricing') or {}) for m in AA['models'] if m.get('pricing')}
 
 def match_console(name):
-    """Match a model to its Console discount by normalized name.
+    """Match a model to its Console price entry by normalized name.
 
-    AA appends a reasoning tier in parentheses and sometimes a release suffix
-    (e.g. 'DeepSeek V4.1 Flash 1017 (Max)'). Strip those, then require an exact
-    normalized match. A plain prefix match would incorrectly give GLM-5.3's
-    discount to the separate, un-discounted GLM-5.3-Flash model."""
+    Caller passes the AA name (the only name available at this point). AA appends
+    a reasoning tier in parentheses and sometimes a release suffix (e.g. 'DeepSeek
+    V4.1 Flash 1017 (Max)'). Strip those, then require an exact normalized match.
+    A plain prefix match would incorrectly give GLM-5.3's discount to the
+    separate, un-discounted GLM-5.3-Flash model."""
     base = norm(re.sub(r'\s*\([^)]*\)\s*$', '', name))
     for key in (norm(name), base, re.sub(r'\d+$', '', base)):
         if key in console_norm:
@@ -160,29 +158,60 @@ for m in AA['models']:
     else:
         rows.append(make_row(m, m['slug'], m['cost_per_task'], go_name, limit, limited, source, 'go-standard'))
 
-# The 60% off lowers the price per token while the Go monthly allowance stays
-# the same ($500 GLM-5.3, $100 DeepSeek V4.1 Flash), so the same task consumes
-# 40% of the allowance. Apply the ratio to the Go effective cost only; the AA
-# list price (Original price) is never discounted. Pre-existing fields stay.
+# The discount is derived from the actual Console price against a reference price,
+# not from the page's "(N% off)" label. Reference order: AA list price per 1M input
+# tokens when it agrees with the page's struck-through price (within 5pp), else the
+# page's own list price, else the label as a last resort. The resulting ratio applies
+# to the Go effective cost only: the monthly allowance is unchanged, so the same task
+# consumes that fraction of it. The AA list price (Original price) is never discounted.
+def console_discount(entry, base_slug):
+    """-> (ratio, source) or None. ratio = fraction of the reference price still paid."""
+    if not entry:
+        return None
+    actual = entry.get('input')
+    ref_page = entry.get('list_input')
+    aa_in = (AA_PRICE.get(base_slug) or {}).get('price_1m_input_tokens')
+    if not actual or actual <= 0:
+        return None
+    ratio_page = actual / ref_page if (ref_page and ref_page > 0) else None
+    pct_page = 1 - ratio_page if (ratio_page is not None and ratio_page < 1) else None
+    ratio_aa = actual / aa_in if (aa_in and aa_in > 0) else None
+    pct_aa = 1 - ratio_aa if (ratio_aa is not None and ratio_aa < 1) else None
+    if pct_aa is not None and (pct_page is None or abs(pct_aa - pct_page) <= 0.05):
+        ratio, source = ratio_aa, 'aa'
+    elif ref_page and ref_page > 0:
+        ratio, source = actual / ref_page, 'page'
+    elif entry.get('label_pct'):
+        ratio, source = 1 - entry['label_pct'] / 100, 'label'
+    else:
+        return None
+    if ratio >= 0.97 or ratio >= 1 or ratio <= 0:  # discount under 3% is noise
+        return None
+    return ratio, source
+
 for r in rows:
-    # Only Go models are in scope; Zen/pay-as-you-go-only models are ignored.
-    entry = match_console(r['name']) if r['go_model'] else None
-    if entry:
-        base_slug = r['slug']
-        for suffix in ('-contributor', '-go-free'):
-            if base_slug.endswith(suffix):
-                base_slug = base_slug[:-len(suffix)]
-        aa_in = (AA_PRICE.get(base_slug) or {}).get('price_1m_input_tokens')
-        console_in = entry.get('input')
-        if aa_in and console_in and 0 < console_in <= aa_in:
-            pct = round((1 - console_in / aa_in) * 100)
-        else:
-            pct = entry['discount_pct']
+    # Only Go standard tiers are discountable; Contributor and free rows never are.
+    in_scope = r['go_model'] and r['pricing_mode'] == 'go-standard'
+    entry = match_console(r['name']) if in_scope else None
+    base_slug = r['slug']
+    for suffix in ('-contributor', '-go-free'):
+        if base_slug.endswith(suffix):
+            base_slug = base_slug[:-len(suffix)]
+    hit = console_discount(entry, base_slug)
+    if hit:
+        ratio, source = hit
         eff = r['go_effective_cost_per_task']
+        pct = round((1 - ratio) * 100)
         r['console_discount_pct'] = pct
+        r['console_discount_ratio'] = ratio
+        r['console_discount_source'] = source
+        # Money follows the quoted integer percentage, as the label-driven build did,
+        # so the snapshot stays byte-identical at pct 60/50 (eff * 0.4, eff * 0.5).
         r['go_effective_cost_per_task_discounted'] = eff * (1 - pct / 100) if eff is not None else None
     else:
         r['console_discount_pct'] = None
+        r['console_discount_ratio'] = None
+        r['console_discount_source'] = None
         r['go_effective_cost_per_task_discounted'] = None
 
 rows.sort(key=lambda r: r['cost_per_intelligence_point'])
@@ -194,4 +223,13 @@ with open(os.path.join(BASE,'data','merged.json'),'w',encoding='utf-8') as f:
 print('total scored:', len(rows))
 print('Go:', sum(1 for r in rows if r['cost_source'].startswith('Go')))
 print('AA provider:', sum(1 for r in rows if r['cost_source']=='AA provider'))
+_disc = [r for r in rows if r['console_discount_ratio'] is not None]
+if _disc:
+    _src = {s: sum(1 for r in _disc if r['console_discount_source'] == s) for s in ('aa', 'page', 'label')}
+    _lo = min(r['console_discount_ratio'] for r in _disc)
+    _hi = max(r['console_discount_ratio'] for r in _disc)
+    print(f'discounts: {len(_disc)} rows (source aa {_src["aa"]} / page {_src["page"]} / '
+          f'label {_src["label"]}, ratio {_lo:.3f}-{_hi:.3f})')
+else:
+    print('discounts: 0 rows')
 print('snapshot:', snapshot_date())

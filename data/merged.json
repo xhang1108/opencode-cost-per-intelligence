@@ -24,6 +24,8 @@
       "median_output_tokens_per_second": 229.22,
       "release_date": "2026-05-20",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -46,6 +48,8 @@
       "median_output_tokens_per_second": 452.88,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -68,6 +72,8 @@
       "median_output_tokens_per_second": 274.5,
       "release_date": "2026-06-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -90,6 +96,8 @@
       "median_output_tokens_per_second": 278.48,
       "release_date": "2026-10-16",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -112,6 +120,8 @@
       "median_output_tokens_per_second": 121.46,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -134,6 +144,8 @@
       "median_output_tokens_per_second": 140.33,
       "release_date": "2026-09-02",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -156,6 +168,8 @@
       "median_output_tokens_per_second": 34.15,
       "release_date": "2026-09-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -178,6 +192,8 @@
       "median_output_tokens_per_second": 61.74,
       "release_date": "2026-08-18",
       "console_discount_pct": 60,
+      "console_discount_ratio": 0.4000000000000001,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 0.0125992
     },
     {
@@ -200,6 +216,8 @@
       "median_output_tokens_per_second": 128.11,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -222,6 +240,8 @@
       "median_output_tokens_per_second": 153.6,
       "release_date": "2026-10-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -244,6 +264,8 @@
       "median_output_tokens_per_second": 157.79,
       "release_date": "2026-10-17",
       "console_discount_pct": 60,
+      "console_discount_ratio": 0.4,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 0.018248
     },
     {
@@ -266,6 +288,8 @@
       "median_output_tokens_per_second": 161.78,
       "release_date": "2026-10-17",
       "console_discount_pct": 60,
+      "console_discount_ratio": 0.4,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 0.024084
     },
     {
@@ -288,6 +312,8 @@
       "median_output_tokens_per_second": 123.98,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -310,6 +336,8 @@
       "median_output_tokens_per_second": 160.18,
       "release_date": "2026-10-17",
       "console_discount_pct": 60,
+      "console_discount_ratio": 0.4,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 0.017016
     },
     {
@@ -332,6 +360,8 @@
       "median_output_tokens_per_second": 68.54,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -354,6 +384,8 @@
       "median_output_tokens_per_second": 156.77,
       "release_date": "2026-10-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -376,6 +408,8 @@
       "median_output_tokens_per_second": 129.99,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -398,6 +432,8 @@
       "median_output_tokens_per_second": 64.62,
       "release_date": "2026-08-18",
       "console_discount_pct": 60,
+      "console_discount_ratio": 0.4000000000000001,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 0.0400744
     },
     {
@@ -420,6 +456,8 @@
       "median_output_tokens_per_second": 569.59,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -442,6 +480,8 @@
       "median_output_tokens_per_second": 66.4,
       "release_date": "2026-08-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -464,6 +504,8 @@
       "median_output_tokens_per_second": 158.16,
       "release_date": "2026-10-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -486,6 +528,8 @@
       "median_output_tokens_per_second": 125.13,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -508,6 +552,8 @@
       "median_output_tokens_per_second": 657.23,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -530,6 +576,8 @@
       "median_output_tokens_per_second": 69.16,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -552,6 +600,8 @@
       "median_output_tokens_per_second": 59.69,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -574,6 +624,8 @@
       "median_output_tokens_per_second": 48.08,
       "release_date": "2026-09-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -596,6 +648,8 @@
       "median_output_tokens_per_second": 180.44,
       "release_date": "2026-10-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -618,6 +672,8 @@
       "median_output_tokens_per_second": 96.11,
       "release_date": "2026-11-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -640,6 +696,8 @@
       "median_output_tokens_per_second": 121.47,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -662,6 +720,8 @@
       "median_output_tokens_per_second": 47.32,
       "release_date": "2026-09-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -684,6 +744,8 @@
       "median_output_tokens_per_second": 72.81,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -706,6 +768,8 @@
       "median_output_tokens_per_second": 59.01,
       "release_date": "2026-07-30",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -728,6 +792,8 @@
       "median_output_tokens_per_second": 58.2,
       "release_date": "2026-08-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -750,6 +816,8 @@
       "median_output_tokens_per_second": 72.06,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -772,6 +840,8 @@
       "median_output_tokens_per_second": 227.54,
       "release_date": "2026-10-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -794,6 +864,8 @@
       "median_output_tokens_per_second": 64.35,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -816,6 +888,8 @@
       "median_output_tokens_per_second": 44.15,
       "release_date": "2026-09-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -838,6 +912,8 @@
       "median_output_tokens_per_second": 136.24,
       "release_date": "2026-08-25",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -860,6 +936,8 @@
       "median_output_tokens_per_second": 129.32,
       "release_date": "2026-10-19",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -882,6 +960,8 @@
       "median_output_tokens_per_second": 72.12,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -904,6 +984,8 @@
       "median_output_tokens_per_second": 158.3,
       "release_date": "2026-03-16",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -926,6 +1008,8 @@
       "median_output_tokens_per_second": 133.25,
       "release_date": "2026-07-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -948,6 +1032,8 @@
       "median_output_tokens_per_second": 70.72,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -970,6 +1056,8 @@
       "median_output_tokens_per_second": 231.14,
       "release_date": "2026-11-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -992,6 +1080,8 @@
       "median_output_tokens_per_second": 87.15,
       "release_date": "2026-06-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1014,6 +1104,8 @@
       "median_output_tokens_per_second": 71.43,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1036,6 +1128,8 @@
       "median_output_tokens_per_second": 50.41,
       "release_date": "2026-09-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1058,6 +1152,8 @@
       "median_output_tokens_per_second": 42,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1080,6 +1176,8 @@
       "median_output_tokens_per_second": 52.36,
       "release_date": "2026-09-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1102,6 +1200,8 @@
       "median_output_tokens_per_second": 56.29,
       "release_date": "2026-07-30",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1124,6 +1224,8 @@
       "median_output_tokens_per_second": 278.48,
       "release_date": "2026-10-16",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1146,6 +1248,8 @@
       "median_output_tokens_per_second": 107.06,
       "release_date": "2026-11-18",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1168,6 +1272,8 @@
       "median_output_tokens_per_second": 79.85,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1190,6 +1296,8 @@
       "median_output_tokens_per_second": 85.64,
       "release_date": "2026-10-26",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1212,6 +1320,8 @@
       "median_output_tokens_per_second": 205.84,
       "release_date": "2026-11-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1234,6 +1344,8 @@
       "median_output_tokens_per_second": 98.6,
       "release_date": "2026-09-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1256,6 +1368,8 @@
       "median_output_tokens_per_second": 67.97,
       "release_date": "2026-09-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1278,6 +1392,8 @@
       "median_output_tokens_per_second": 254.53,
       "release_date": "2026-11-07",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1300,6 +1416,8 @@
       "median_output_tokens_per_second": 95.85,
       "release_date": "2026-09-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1322,6 +1440,8 @@
       "median_output_tokens_per_second": 79.03,
       "release_date": "2026-08-13",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1344,6 +1464,8 @@
       "median_output_tokens_per_second": 72.63,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1366,6 +1488,8 @@
       "median_output_tokens_per_second": 90.2,
       "release_date": "2026-08-10",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1388,6 +1512,8 @@
       "median_output_tokens_per_second": 41.15,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1410,6 +1536,8 @@
       "median_output_tokens_per_second": 253.5,
       "release_date": "2026-10-27",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1432,6 +1560,8 @@
       "median_output_tokens_per_second": 260.77,
       "release_date": "2026-11-20",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1454,6 +1584,8 @@
       "median_output_tokens_per_second": 324.23,
       "release_date": "2026-03-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1476,6 +1608,8 @@
       "median_output_tokens_per_second": 43.12,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1498,6 +1632,8 @@
       "median_output_tokens_per_second": 40.65,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1520,6 +1656,8 @@
       "median_output_tokens_per_second": 107.57,
       "release_date": "2026-11-18",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1542,6 +1680,8 @@
       "median_output_tokens_per_second": 360.47,
       "release_date": "2026-10-15",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1564,6 +1704,8 @@
       "median_output_tokens_per_second": 202.05,
       "release_date": "2026-11-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1586,6 +1728,8 @@
       "median_output_tokens_per_second": 93.59,
       "release_date": "2026-11-05",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1608,6 +1752,8 @@
       "median_output_tokens_per_second": 96.69,
       "release_date": "2026-09-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1630,6 +1776,8 @@
       "median_output_tokens_per_second": 43.55,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1652,6 +1800,8 @@
       "median_output_tokens_per_second": 54.1,
       "release_date": "2026-11-16",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1674,6 +1824,8 @@
       "median_output_tokens_per_second": 71.79,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1696,6 +1848,8 @@
       "median_output_tokens_per_second": 80.48,
       "release_date": "2026-08-13",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1718,6 +1872,8 @@
       "median_output_tokens_per_second": 73.23,
       "release_date": "2026-08-13",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1740,6 +1896,8 @@
       "median_output_tokens_per_second": 28.5,
       "release_date": "2026-10-23",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1762,6 +1920,8 @@
       "median_output_tokens_per_second": 39.16,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1784,6 +1944,8 @@
       "median_output_tokens_per_second": 117.15,
       "release_date": "2026-09-18",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1806,6 +1968,8 @@
       "median_output_tokens_per_second": null,
       "release_date": "2026-08-30",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1828,6 +1992,8 @@
       "median_output_tokens_per_second": 143.22,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1850,6 +2016,8 @@
       "median_output_tokens_per_second": 169.38,
       "release_date": "2026-07-15",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1872,6 +2040,8 @@
       "median_output_tokens_per_second": 321.37,
       "release_date": "2026-08-11",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1894,6 +2064,8 @@
       "median_output_tokens_per_second": 72.68,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1916,6 +2088,8 @@
       "median_output_tokens_per_second": 219.11,
       "release_date": "2026-11-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1938,6 +2112,8 @@
       "median_output_tokens_per_second": 47.14,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1960,6 +2136,8 @@
       "median_output_tokens_per_second": 414.73,
       "release_date": "2026-07-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -1982,6 +2160,8 @@
       "median_output_tokens_per_second": 89.89,
       "release_date": "2026-09-30",
       "console_discount_pct": 50,
+      "console_discount_ratio": 0.5,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 1.4382000000000001
     },
     {
@@ -2004,6 +2184,8 @@
       "median_output_tokens_per_second": 58.81,
       "release_date": "2026-10-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2026,6 +2208,8 @@
       "median_output_tokens_per_second": 60.62,
       "release_date": "2026-09-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2048,6 +2232,8 @@
       "median_output_tokens_per_second": 109.88,
       "release_date": "2026-11-18",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2070,6 +2256,8 @@
       "median_output_tokens_per_second": 62.78,
       "release_date": "2026-11-17",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2092,6 +2280,8 @@
       "median_output_tokens_per_second": 140.33,
       "release_date": "2026-09-02",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2114,6 +2304,8 @@
       "median_output_tokens_per_second": 98.59,
       "release_date": "2026-09-30",
       "console_discount_pct": 50,
+      "console_discount_ratio": 0.5,
+      "console_discount_source": "page",
       "go_effective_cost_per_task_discounted": 1.6577666666666666
     },
     {
@@ -2136,6 +2328,8 @@
       "median_output_tokens_per_second": 46.51,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2158,6 +2352,8 @@
       "median_output_tokens_per_second": 73.06,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2180,6 +2376,8 @@
       "median_output_tokens_per_second": 79.38,
       "release_date": "2026-08-06",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2202,6 +2400,8 @@
       "median_output_tokens_per_second": 72.39,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2224,6 +2424,8 @@
       "median_output_tokens_per_second": 91.33,
       "release_date": "2025-10-15",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2246,6 +2448,8 @@
       "median_output_tokens_per_second": 436.49,
       "release_date": "2026-10-27",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2268,6 +2472,8 @@
       "median_output_tokens_per_second": 63.37,
       "release_date": "2026-10-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2290,6 +2496,8 @@
       "median_output_tokens_per_second": 205.26,
       "release_date": "2026-10-15",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2312,6 +2520,8 @@
       "median_output_tokens_per_second": 99.43,
       "release_date": "2026-09-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2334,6 +2544,8 @@
       "median_output_tokens_per_second": 44.45,
       "release_date": "2026-07-16",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2356,6 +2568,8 @@
       "median_output_tokens_per_second": 255.3,
       "release_date": "2025-08-05",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2378,6 +2592,8 @@
       "median_output_tokens_per_second": 112.09,
       "release_date": "2026-11-18",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2400,6 +2616,8 @@
       "median_output_tokens_per_second": 73.66,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2422,6 +2640,8 @@
       "median_output_tokens_per_second": null,
       "release_date": "2026-10-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2444,6 +2664,8 @@
       "median_output_tokens_per_second": 167.98,
       "release_date": "2026-07-15",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2466,6 +2688,8 @@
       "median_output_tokens_per_second": 47.62,
       "release_date": "2026-09-03",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2488,6 +2712,8 @@
       "median_output_tokens_per_second": 124.61,
       "release_date": "2026-10-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2510,6 +2736,8 @@
       "median_output_tokens_per_second": 80.94,
       "release_date": "2026-10-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2532,6 +2760,8 @@
       "median_output_tokens_per_second": 53.77,
       "release_date": "2026-09-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2554,6 +2784,8 @@
       "median_output_tokens_per_second": 109.09,
       "release_date": "2026-07-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2576,6 +2808,8 @@
       "median_output_tokens_per_second": 63.36,
       "release_date": "2026-09-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2598,6 +2832,8 @@
       "median_output_tokens_per_second": 66.95,
       "release_date": "2026-08-14",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2620,6 +2856,8 @@
       "median_output_tokens_per_second": 61.19,
       "release_date": "2026-08-14",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2642,6 +2880,8 @@
       "median_output_tokens_per_second": 52.62,
       "release_date": "2026-09-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2664,6 +2904,8 @@
       "median_output_tokens_per_second": 82.87,
       "release_date": "2026-10-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2686,6 +2928,8 @@
       "median_output_tokens_per_second": 77.66,
       "release_date": "2026-10-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2708,6 +2952,8 @@
       "median_output_tokens_per_second": 64.73,
       "release_date": "2026-09-21",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2730,6 +2976,8 @@
       "median_output_tokens_per_second": 73.87,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2752,6 +3000,8 @@
       "median_output_tokens_per_second": 64.37,
       "release_date": "2026-08-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2774,6 +3024,8 @@
       "median_output_tokens_per_second": 133.9,
       "release_date": "2026-10-12",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2796,6 +3048,8 @@
       "median_output_tokens_per_second": 56.88,
       "release_date": "2026-09-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2818,6 +3072,8 @@
       "median_output_tokens_per_second": 56.49,
       "release_date": "2026-10-06",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2840,6 +3096,8 @@
       "median_output_tokens_per_second": 96.07,
       "release_date": "2026-09-22",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2862,6 +3120,8 @@
       "median_output_tokens_per_second": 68.6,
       "release_date": "2026-08-14",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2884,6 +3144,8 @@
       "median_output_tokens_per_second": 129.13,
       "release_date": "2026-09-28",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2906,6 +3168,8 @@
       "median_output_tokens_per_second": 256.77,
       "release_date": "2026-06-04",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2928,6 +3192,8 @@
       "median_output_tokens_per_second": 42.51,
       "release_date": "2026-09-02",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2950,6 +3216,8 @@
       "median_output_tokens_per_second": 109.63,
       "release_date": "2026-09-02",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2972,6 +3240,8 @@
       "median_output_tokens_per_second": 58.94,
       "release_date": "2026-09-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -2994,6 +3264,8 @@
       "median_output_tokens_per_second": 170.89,
       "release_date": "2026-04-29",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3016,6 +3288,8 @@
       "median_output_tokens_per_second": 84.69,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3038,6 +3312,8 @@
       "median_output_tokens_per_second": 115.31,
       "release_date": "2026-09-02",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3060,6 +3336,8 @@
       "median_output_tokens_per_second": 62.02,
       "release_date": "2026-09-01",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3082,6 +3360,8 @@
       "median_output_tokens_per_second": 49,
       "release_date": "2026-07-24",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3104,6 +3384,8 @@
       "median_output_tokens_per_second": 53.9,
       "release_date": "2026-08-14",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     },
     {
@@ -3126,6 +3408,8 @@
       "median_output_tokens_per_second": 88.95,
       "release_date": "2026-11-09",
       "console_discount_pct": null,
+      "console_discount_ratio": null,
+      "console_discount_source": null,
       "go_effective_cost_per_task_discounted": null
     }
   ]
