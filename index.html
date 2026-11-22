@@ -42,6 +42,16 @@
   .switch-name{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint)}
   .note{font-family:var(--mono);font-size:10px;color:var(--faint)}
   .note:empty{display:none}
+  .history-ctrl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .history-slider{width:100%;margin:6px 0 2px;accent-color:var(--accent);cursor:pointer}
+  .history-ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--faint)}
+  .history-tick{padding:0 2px;white-space:nowrap;cursor:help}
+  .history-tick.current{color:var(--text)}
+  .history-tick[data-i]{cursor:pointer}
+  .history-first{display:inline-block;margin-left:6px;padding:0 4px;border:.5px solid var(--accent);border-radius:3px;font-style:normal;font-size:9px;color:var(--accent)}
+  .head-switches{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .switch[hidden]{display:none!important}
+  #historyDate.viewing{color:var(--warning);border-color:var(--warning)}
   button{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text);background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--border);border:0;border-radius:4px;padding:6px 10px;cursor:pointer}
   button:hover{background:rgba(255,255,255,.1)}
   button.on{box-shadow:inset 0 0 0 1px var(--border-strong)}
@@ -81,6 +91,8 @@
   .switch-opt.on{box-shadow:none;color:var(--text)}
   .switch.compact .switch-opt{width:120px;padding:6px 12px;font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase}
   .switch.labels .switch-opt{width:64px}
+  .switch.disabled{opacity:var(--dim)}
+  button:disabled{opacity:var(--dim);cursor:default}
   .shape{display:inline-block;width:6px;height:6px;margin-right:6px;vertical-align:1px;flex:0 0 auto}
   .shape-square{background:var(--muted);box-shadow:0 0 0 1px var(--text)}
   .shape-circle{border-radius:50%;background:var(--muted)}
@@ -101,10 +113,12 @@
   .rank{color:var(--faint);font-family:var(--mono)}
   .go-badge{display:inline-block;margin-left:6px;padding:0 4px;border:.5px solid var(--border);border-radius:4px;font-family:var(--mono);font-size:10px;line-height:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--success);vertical-align:1px}
   .go-badge.contrib{color:var(--warning);border-color:var(--warning);opacity:.8}
+  .go-badge.discount{color:var(--accent);border-color:var(--accent);opacity:.9}
   .hide-btn{padding:2px 6px;font-size:10px;opacity:var(--dim)}
   tr:hover .hide-btn{opacity:1}
   .foot{font-family:var(--mono);font-size:10px;color:var(--faint);line-height:1.9;margin-top:16px}
   .foot a{color:var(--muted)}
+  .foot strong{color:var(--muted);font-weight:500}
 </style>
 </head>
 <body>
@@ -128,13 +142,34 @@
     </div>
   </div>
 
+  <div class="panel" id="historyPanel" hidden>
+    <div class="panel-head">
+      <h2>Snapshot history</h2>
+      <div class="history-ctrl">
+        <span id="historyDate" class="badge">Latest</span>
+        <button id="historyLatest" class="act" title="Return to the latest snapshot" disabled>Back to latest</button>
+      </div>
+    </div>
+    <input id="historySlider" class="history-slider" type="range" min="0" max="0" step="1" value="0" aria-label="Snapshot date">
+    <div id="historyTicks" class="history-ticks"></div>
+    <div id="historyChanges" class="note"></div>
+  </div>
+
   <div class="panel">
     <div class="panel-head">
       <h2>Intelligence Index vs. Cost / Task — Pareto frontier</h2>
-      <div id="priceSwitch" class="switch hero" data-switch data-count="2" data-index="0" role="group" aria-label="Pricing mode" tabindex="0">
-        <span class="switch-thumb" aria-hidden="true"></span>
-        <button id="priceGo" class="switch-opt on" data-opt>Go price</button>
-        <button id="priceOriginal" class="switch-opt" data-opt>Original price</button>
+      <div class="head-switches">
+        <div id="priceSwitch" class="switch hero" data-switch data-count="2" data-index="0" role="group" aria-label="Pricing mode" tabindex="0">
+          <span class="switch-thumb" aria-hidden="true"></span>
+          <button id="priceGo" class="switch-opt on" data-opt>Go price</button>
+          <button id="priceOriginal" class="switch-opt" data-opt>Original price</button>
+        </div>
+        <span class="switch-name">Discount</span>
+        <div id="discountSwitch" class="switch compact" data-switch data-count="2" data-index="0" role="group" aria-label="Go discount" tabindex="0">
+          <span class="switch-thumb" aria-hidden="true"></span>
+          <button id="discountOn" class="switch-opt on" data-opt>With discount</button>
+          <button id="discountOff" class="switch-opt" data-opt>No discount</button>
+        </div>
       </div>
     </div>
     <div class="chart-wrap"><canvas id="chart"></canvas><div id="chartEmpty" class="chart-empty" hidden>No models visible</div></div>
@@ -198,6 +233,9 @@
     Go $/task = AA $/task × $10 / monthly limit; non-Go models at AA list price.<br/>
     Muse Spark appears twice: Meta standard at AA list price, and Go's Contributor price for the same model and Intelligence Index. AA's score is the Max effort run; the Contributor variant Go sells cannot use Max.<br/>
     Beam appears twice: AA list price and Go's free tier ($0/task, no monthly allowance, limited regions and limited time). The free tier has daily request limits; it is shown at the left edge of the log-scale chart.<br/>
+    <br/>
+    <strong>Data sources</strong> — <a href="https://artificialanalysis.ai/data-api">AA Data API</a> (Intelligence Index, cost/task, list token prices) · <a href="https://opencode.ai/console/go">OpenCode Go</a> (monthly limits) · <a href="https://opencode.ai/docs/console/models/">OpenCode Console models</a> (actual token prices) · <a href="https://opencode.ai/inference/go/v1/models">Go models API</a>.<br/>
+    <strong>Discount method</strong> — OpenCode does not always label a discount; it often just lowers the price. We use AA's list price per 1M tokens as the reference — the most widely accepted public price today — and compute discount = 1 − OpenCode actual price / AA list price. This applies to Go models only and leaves the Original (list) price untouched. We keep this method unless a dispute requires a change.<br/>
     Static snapshot (not live) · <a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index">AA Intelligence Index</a> · <a href="https://opencode.ai/console/go">Go pricing</a> · unofficial, not affiliated with OpenCode / SST.
   </div>
 </main>
@@ -245,8 +283,9 @@ const COLORS = {
   Inkling:'#6BB6C7', Other:'#8A8F98'
 };
 
-let data = null, filter = 'all', priceMode = 'go', sortKey = 'cost', sortAsc = true, priceAnimTimer = null, selectedSlug = null, showLabels = true, searchQuery = '';
-const hiddenCompanies = new Set(), hiddenModels = new Set();
+let data = null, latestData = null, historyEntries = [], currentHistoryIndex = -1, filter = 'all', priceMode = 'go', discountOn = true, sortKey = 'cost', sortAsc = true, priceAnimTimer = null, selectedSlug = null, showLabels = true, searchQuery = '';
+const hiddenCompanies = new Set(), hiddenModels = new Set(), historySnapshots = new Map();
+let historyLoadTimer = null;
 
 const MONO = { family:'"OpenTUI Mono","JetBrains Mono",monospace', size:10 };
 const T = {
@@ -265,7 +304,40 @@ const swatchCSS = document.createElement('style');
 swatchCSS.textContent = Object.entries(COLORS).map(([co,c])=>`.${vendorClass(co)}{--swatch:${c}}`).join('\n');
 document.head.appendChild(swatchCSS);
 const isGo = r => r.cost_source.startsWith('Go');
-const costKey = () => priceMode === 'go' ? 'go_effective_cost_per_task' : 'aa_cost_per_task_used';
+// The discount lowers the Go price per token (allowance unchanged); the AA
+// list price (Original) is never discounted.
+const costKey = () => priceMode === 'go'
+  ? (discountOn ? 'go_effective_cost_per_task_discounted' : 'go_effective_cost_per_task')
+  : 'aa_cost_per_task_used';
+// Older snapshots predate the discounted field. Fall back to the plain Go cost
+// so every read of costKey() is still numeric (no null .toFixed() crashes).
+const materializeDiscount = r => {
+  if(r.go_effective_cost_per_task_discounted == null) r.go_effective_cost_per_task_discounted = r.go_effective_cost_per_task;
+  return r;
+};
+// Discount is usable only for Go price + a view that contains Go models.
+const hasDiscount = () => !!(data && data.rows.some(r=>r.console_discount_pct != null));
+const discountReason = () => {
+  if(priceMode === 'original') return 'Discount applies to Go price only';
+  if(filter === 'aa') return 'AA provider models have no Go discount';
+  if(!hasDiscount()) return 'No discount available for this snapshot';
+  return null;
+};
+const DISCOUNT_TITLE = 'Discount lowers the Go price; the Original (list) price is never discounted.';
+const syncDiscountAvailability = () => {
+  const sw = document.getElementById('discountSwitch');
+  if(!sw) return;
+  // The switch keeps its position in both price modes; only its state changes.
+  const reason = discountReason();
+  const disabled = !!reason;
+  const title = reason || DISCOUNT_TITLE;
+  sw.classList.toggle('disabled', disabled);
+  sw.title = title;
+  sw.querySelectorAll('[data-opt]').forEach(b=>{
+    b.disabled = disabled;
+    b.title = title;
+  });
+};
 function chartBounds(ck){
   const allX = data.rows.map(r=>r[ck]).filter(v=>v>0 && isFinite(v));
   const allY = data.rows.map(r=>r.intelligence_index).filter(v=>isFinite(v));
@@ -281,6 +353,14 @@ function companyOf(r){
   if(COMPANY_EXCEPTIONS[s]) return COMPANY_EXCEPTIONS[s];
   for(const [company,re] of COMPANY_RULES) if(re.test(n) || re.test(s)) return company;
   return 'Other';
+}
+
+function updateBadges(){
+  document.getElementById('ver').textContent = data.intelligence_index_version || '—';
+  document.getElementById('snap').textContent = data.snapshot_date || '—';
+  document.getElementById('built').textContent = data.build_date || '—';
+  document.getElementById('n').textContent = data.rows.length;
+  document.getElementById('ngo').textContent = data.rows.filter(isGo).length;
 }
 
 function sourceRows(){
@@ -507,15 +587,13 @@ async function init(){
     document.querySelector('main').insertAdjacentHTML('afterbegin','<div class="panel">Failed to load data/merged.json: '+e.message+'</div>');
     return;
   }
-  data.rows.forEach(r=>{ r.company = companyOf(r); });
-  document.getElementById('ver').textContent = data.intelligence_index_version;
-  document.getElementById('snap').textContent = data.snapshot_date || '—';
-  document.getElementById('built').textContent = data.build_date || '—';
-  document.getElementById('n').textContent = data.rows.length;
-  document.getElementById('ngo').textContent = data.rows.filter(isGo).length;
+  data.rows.forEach(r=>{ r.company = companyOf(r); materializeDiscount(r); });
+  latestData = data;
+  updateBadges();
   renderLegend();
   renderChart(filteredRows());
   renderTable();
+  initHistory();
 
   const canvas = document.getElementById('chart');
   let downPt = null;
@@ -538,17 +616,16 @@ async function init(){
   const setFilter = name => {
     filter = name;
     setSwitch(filterSwitch, FILTER_INDEX[name]);
+    syncDiscountAvailability();
     refresh();
   };
   document.getElementById('filterAll').addEventListener('click', ()=>setFilter('all'));
   document.getElementById('filterGo').addEventListener('click', ()=>setFilter('go'));
   document.getElementById('filterAA').addEventListener('click', ()=>setFilter('aa'));
   const priceSwitch = document.getElementById('priceSwitch');
-  const setPrice = (mode) => {
-    if(mode === priceMode) return;
-    priceMode = mode;
-    setSwitch(priceSwitch, mode === 'go' ? 0 : 1);
-    renderTable();
+  const discountSwitch = document.getElementById('discountSwitch');
+  // Shared animated update for any change to the active cost key (price mode or discount).
+  const animateCostChange = () => {
     const c = window._chart;
     if(!c){ refresh(); return; }
     const saved = {
@@ -561,7 +638,6 @@ async function init(){
     const byLabel = new Map(c.data.datasets.map(d=>[d.label,d]));
     const companies = [...new Set(rows.map(r=>r.company))];
     if(companies.some(co=>!byLabel.has(co))){ refresh(); return; }
-    c.options.scales.x.title.text = 'COST / TASK ($) — '+(mode==='go'?'GO':'ORIGINAL');
     c.options.plugins.zoom.limits.x = {min:b.xLo,max:b.xHi,minRange:0.0002};
     const pointSets = c.data.datasets.filter(d=>d.type !== 'line');
     const pfSet = byLabel.get('Pareto frontier');
@@ -598,14 +674,34 @@ async function init(){
         c.options.scales.x.min = saved.xmin; c.options.scales.x.max = saved.xmax;
         c.options.scales.y.min = saved.ymin; c.options.scales.y.max = saved.ymax;
       }
-      if(k >= 1) labelEpoch++;   // re-lay out labels once the price animation settles
+      if(k >= 1) labelEpoch++;   // re-lay out labels once the cost animation settles
       c.update('none');
       priceAnimTimer = k < 1 ? setTimeout(step, 16) : null;
     };
     priceAnimTimer = setTimeout(step, 16);
   };
+  const setPrice = (mode) => {
+    if(mode === priceMode) return;
+    priceMode = mode;
+    setSwitch(priceSwitch, mode === 'go' ? 0 : 1);
+    syncDiscountAvailability();
+    renderTable();
+    const c = window._chart;
+    if(c) c.options.scales.x.title.text = 'COST / TASK ($) — '+(mode==='go'?'GO':'ORIGINAL');
+    animateCostChange();
+  };
+  const setDiscount = (on) => {
+    if(on === discountOn) return;
+    discountOn = on;
+    setSwitch(discountSwitch, on ? 0 : 1);
+    renderTable();
+    animateCostChange();
+  };
+  syncDiscountAvailability();
   document.getElementById('priceGo').addEventListener('click', ()=>setPrice('go'));
   document.getElementById('priceOriginal').addEventListener('click', ()=>setPrice('original'));
+  document.getElementById('discountOn').addEventListener('click', ()=>setDiscount(true));
+  document.getElementById('discountOff').addEventListener('click', ()=>setDiscount(false));
   const labelSwitch = document.getElementById('labelSwitch');
   const setLabels = show => {
     showLabels = show;
@@ -621,7 +717,7 @@ async function init(){
       const opts = [...sw.querySelectorAll('[data-opt]')];
       const cur = Math.max(0, opts.findIndex(o=>o.classList.contains('on')));
       const next = (cur + (e.key === 'ArrowRight' ? 1 : -1) + opts.length) % opts.length;
-      if(!opts[next].classList.contains('on')) opts[next].click();
+      if(!opts[next].disabled && !opts[next].classList.contains('on')) opts[next].click();
     });
   });
 
@@ -674,6 +770,113 @@ async function init(){
       renderTable();
     });
   });
+}
+
+async function initHistory(){
+  const panel = document.getElementById('historyPanel');
+  try{
+    const res = await fetch('data/history/index.json');
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const idx = await res.json();
+    historyEntries = Array.isArray(idx && idx.entries) ? idx.entries : [];
+  }catch(e){
+    console.warn('Snapshot history unavailable:', e);
+    panel.hidden = true;
+    return;
+  }
+  if(!historyEntries.length){ panel.hidden = true; return; }
+  panel.hidden = false;
+  const slider = document.getElementById('historySlider');
+  slider.min = '0';
+  slider.max = String(historyEntries.length - 1);
+  slider.value = String(historyEntries.length - 1);
+  slider.step = '1';
+  currentHistoryIndex = historyEntries.length - 1;  // default: latest, already loaded
+  document.getElementById('historyTicks').innerHTML = historyEntries.map((e,i)=>{
+    const tip = (e.changes && e.changes.length) ? e.changes.join('\n') : e.date;
+    const first = i === 0 ? '<em class="history-first">DAY 1</em>' : '';
+    return `<span class="history-tick" data-i="${i}" title="${esc(tip)}">${esc(fmtDay(e.date))}${first}</span>`;
+  }).join('');
+  renderHistoryLabel();
+  // Update the label immediately; load the snapshot shortly after the drag
+  // settles, and again on release (some browsers skip change on touch).
+  slider.addEventListener('input', ()=>{
+    renderHistoryLabel();
+    if(historyLoadTimer) clearTimeout(historyLoadTimer);
+    historyLoadTimer = setTimeout(()=>viewHistory(+slider.value), 150);
+  });
+  const loadNow = ()=>{
+    if(historyLoadTimer) clearTimeout(historyLoadTimer);
+    viewHistory(+slider.value);
+  };
+  slider.addEventListener('change', loadNow);
+  slider.addEventListener('pointerup', loadNow);
+  document.getElementById('historyTicks').addEventListener('click', e=>{
+    const t = e.target.closest('.history-tick[data-i]');
+    if(!t) return;
+    slider.value = t.dataset.i;
+    viewHistory(+slider.value);
+  });
+  document.getElementById('historyLatest').addEventListener('click', viewLatest);
+}
+
+const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const fmtDay = iso => {
+  const [y,m,d] = String(iso || '').split('-');
+  return (y && m && d) ? `${d} ${MONTHS[+m-1]} ${y}` : (iso || '—');
+};
+function renderHistoryLabel(){
+  const slider = document.getElementById('historySlider');
+  const last = historyEntries.length - 1;
+  const i = Math.max(0, Math.min(last, +slider.value));
+  const e = historyEntries[i];
+  const isLatest = i === last;
+  const dateEl = document.getElementById('historyDate');
+  dateEl.textContent = e ? (isLatest ? 'Latest' : 'Viewing '+fmtDay(e.date)) : '—';
+  dateEl.classList.toggle('viewing', !isLatest);
+  document.getElementById('historyLatest').disabled = isLatest;
+  document.getElementById('historyChanges').textContent = e && e.changes ? e.changes.join(' · ') : '';
+  document.querySelectorAll('.history-tick').forEach((t,ti)=>t.classList.toggle('current', ti===i));
+}
+
+function applySnapshot(snap){
+  data = snap;
+  data.rows.forEach(r=>{ r.company = companyOf(r); materializeDiscount(r); });
+  hiddenCompanies.clear(); hiddenModels.clear(); selectedSlug = null;
+  updateBadges();
+  syncDiscountAvailability();
+  renderLegend();
+  renderChart(filteredRows());
+  renderTable();
+}
+
+async function viewHistory(i){
+  const e = historyEntries[i];
+  if(!e) return;
+  if(i === historyEntries.length - 1){ viewLatest(); return; }
+  let snap = historySnapshots.get(e.date);
+  if(!snap){
+    try{
+      const res = await fetch('data/history/'+encodeURIComponent(e.date)+'.json');
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      snap = await res.json();
+      historySnapshots.set(e.date, snap);
+    }catch(err){
+      console.warn('Failed to load snapshot '+e.date+':', err);
+      document.getElementById('historySlider').value = String(currentHistoryIndex);
+      return;
+    }
+  }
+  applySnapshot(snap);
+  currentHistoryIndex = i;
+  renderHistoryLabel();
+}
+
+function viewLatest(){
+  if(latestData) applySnapshot(latestData);
+  currentHistoryIndex = historyEntries.length - 1;
+  document.getElementById('historySlider').value = String(currentHistoryIndex);
+  renderHistoryLabel();
 }
 
 function refresh(){
@@ -875,7 +1078,9 @@ function syncChartData(rows){
 
 function renderTable(){
   const ck = costKey();
-  document.querySelector('th[data-k="cost"]').textContent = priceMode === 'go' ? 'Go $/task' : 'AA $/task';
+  document.querySelector('th[data-k="cost"]').textContent = priceMode === 'go'
+    ? (discountOn && hasDiscount() ? 'Go $/task (disc.)' : 'Go $/task')
+    : 'AA $/task';
   const frontier = new Set(pareto(filteredRows(), ck).map(r=>r.slug));
   const rows = tableRows().slice().sort((a,b)=>{
     let va=a[sortKey], vb=b[sortKey];
@@ -889,7 +1094,7 @@ function renderTable(){
   document.querySelector('#tbl tbody').innerHTML = rows.length ? rows.map((r,i)=>
     `<tr data-slug="${r.slug}" class="${r.slug === selectedSlug ? 'selected' : ''} ${frontier.has(r.slug) ? 'frontier' : ''}">
       <td class="rank">${i+1}</td>
-      <td class="name">${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? '<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">Free</span>' : ''}</td>
+      <td class="name">${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? '<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">Free</span>' : ''}${discountOn && r.console_discount_pct != null ? `<span class="go-badge discount" title="OpenCode Console pay-as-you-go discount">${r.console_discount_pct}% off</span>` : ''}</td>
       <td class="name"><i class="swatch table-swatch ${vendorClass(COLORS[r.company]?r.company:'Other')}"></i>${r.company}</td>
       <td class="num">${r.intelligence_index}</td>
       <td class="num">${r[ck] != null ? '$'+r[ck].toFixed(4) : '—'}</td>

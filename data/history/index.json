@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-21",
+      "snapshot_date": "2026-11-21",
+      "build_date": "2026-11-22",
+      "changes": [
+        "Hy4 New limit: none → 60"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "snapshot_date": "2026-11-21",
+      "build_date": "2026-11-22",
+      "changes": [
+        "DeepSeek V4.1 Flash 1017 discount: none → 60%",
+        "GLM-5.3 discount: none → 60%",
+        "Gemini 4 Argon discount: none → 50%"
+      ]
+    }
+  ]
+}

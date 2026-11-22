@@ -28,7 +28,9 @@ jobs:
         run: |
           python scripts/fetch_aa.py
           python scripts/fetch_go.py
+          python scripts/fetch_console.py
           python build.py
+          python scripts/save_history.py
 
       - name: Commit data if changed
         run: |

@@ -1,0 +1,82 @@
+{
+  "deepseekv41flash": {
+    "discount_pct": 60,
+    "name": "DeepSeek V4.1 Flash",
+    "input": 0.12,
+    "output": 0.48,
+    "cache_read": 0.0024,
+    "list_input": 0.3,
+    "list_output": 1.2,
+    "list_cache_read": 0.006
+  },
+  "gemini36flash": {
+    "discount_pct": 50,
+    "name": "Gemini 3.6 Flash",
+    "input": 0.75,
+    "output": 3.75,
+    "cache_read": 0.075,
+    "list_input": 1.5,
+    "list_output": 7.5,
+    "list_cache_read": 0.15
+  },
+  "gemini37flash": {
+    "discount_pct": 50,
+    "name": "Gemini 3.7 Flash",
+    "input": 0.75,
+    "output": 3.75,
+    "cache_read": 0.075,
+    "list_input": 1.5,
+    "list_output": 7.5,
+    "list_cache_read": 0.15
+  },
+  "gemini38flash": {
+    "discount_pct": 50,
+    "name": "Gemini 3.8 Flash",
+    "input": 0.75,
+    "output": 3.75,
+    "cache_read": 0.075,
+    "list_input": 1.5,
+    "list_output": 7.5,
+    "list_cache_read": 0.15
+  },
+  "gemini4argon": {
+    "discount_pct": 50,
+    "name": "Gemini 4 Argon",
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.1,
+    "list_input": 4.0,
+    "list_output": 20.0,
+    "list_cache_read": 0.2
+  },
+  "gemini4carbon": {
+    "discount_pct": 50,
+    "name": "Gemini 4 Carbon",
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.1,
+    "list_input": 4.0,
+    "list_output": 20.0,
+    "list_cache_read": 0.2
+  },
+  "glm53": {
+    "discount_pct": 60,
+    "name": "GLM 5.3",
+    "input": 0.56,
+    "output": 1.76,
+    "cache_read": 0.104,
+    "list_input": 1.4,
+    "list_output": 4.4,
+    "list_cache_read": 0.26
+  },
+  "mistrallarge4": {
+    "discount_pct": 50,
+    "name": "Mistral Large 4",
+    "input": 0.68,
+    "output": 2.09,
+    "cache_read": 0.07,
+    "list_input": 1.36,
+    "list_output": 4.18,
+    "list_cache_read": 0.14
+  }
+}

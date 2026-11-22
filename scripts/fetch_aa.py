@@ -43,6 +43,7 @@ def main():
                 'slug': m['slug'],
                 'intelligence_index': (m.get('evaluations') or {}).get('artificial_analysis_intelligence_index'),
                 'cost_per_task': cost.get('total_cost'),
+                'pricing': m.get('pricing'),  # list price per 1M tokens; baseline for Go discounts
                 'median_output_tokens_per_second': (m.get('performance') or {}).get('median_output_tokens_per_second'),
                 'release_date': m.get('release_date'),
             })
