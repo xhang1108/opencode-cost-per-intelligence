@@ -287,6 +287,8 @@ const COLORS = {
 let data = null, latestData = null, historyEntries = [], currentHistoryIndex = -1, loadedHistoryIndex = -1, filter = 'all', priceMode = 'go', discountOn = true, sortKey = 'cost', sortAsc = true, priceAnimTimer = null, selectedSlug = null, showLabels = true, searchQuery = '';
 const hiddenCompanies = new Set(), hiddenModels = new Set(), historySnapshots = new Map();
 let historyLoadTimer = null;
+// Monotonic token: a snapshot fetch that resolves after the user moved on is discarded.
+let historyReq = 0;
 
 const MONO = { family:'"OpenTUI Mono","JetBrains Mono",monospace', size:10 };
 const T = {
@@ -854,6 +856,7 @@ function applySnapshot(snap){
 async function viewHistory(i){
   const e = historyEntries[i];
   if(!e) return;
+  const req = ++historyReq;
   if(i === loadedHistoryIndex) return;
   if(i === historyEntries.length - 1){ viewLatest(); return; }
   let snap = historySnapshots.get(e.date);
@@ -865,10 +868,12 @@ async function viewHistory(i){
       historySnapshots.set(e.date, snap);
     }catch(err){
       console.warn('Failed to load snapshot '+e.date+':', err);
+      if(req !== historyReq) return;
       document.getElementById('historySlider').value = String(currentHistoryIndex);
       renderHistoryLabel();
       return;
     }
+    if(req !== historyReq) return;
   }
   applySnapshot(snap);
   currentHistoryIndex = loadedHistoryIndex = i;
@@ -876,6 +881,7 @@ async function viewHistory(i){
 }
 
 function viewLatest(){
+  ++historyReq;
   if(latestData) applySnapshot(latestData);
   currentHistoryIndex = loadedHistoryIndex = historyEntries.length - 1;
   document.getElementById('historySlider').value = String(currentHistoryIndex);
