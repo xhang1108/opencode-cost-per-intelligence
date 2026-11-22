@@ -625,6 +625,17 @@ function pinSelection(c, slug){
   }
   c.update('none');
 }
+// Chart.js clears the active tooltip after the hover pass, so a pinned point
+// needs a redraw on the next frame (hover) and after the pointer leaves the
+// canvas. Otherwise the tooltip vanishes although the row stays selected.
+function repinSelected(c){
+  if(!c || c !== window._chart || !selectedSlug) return;
+  const f = findPoint(c, selectedSlug); if(!f) return;
+  const el = c.getDatasetMeta(f.di).data[f.idx];
+  c.tooltip.setActiveElements([{datasetIndex:f.di, index:f.idx}], {x:el.x, y:el.y});
+  c.tooltip.update(true);
+  c.draw();
+}
 function setSelected(slug, from){
   selectedSlug = (selectedSlug === slug) ? null : slug;
   pinSelection(window._chart, selectedSlug);
@@ -658,6 +669,7 @@ async function init(){
   const canvas = document.getElementById('chart');
   let downPt = null;
   canvas.addEventListener('mousedown', e=>{ downPt = {x:e.clientX, y:e.clientY}; });
+  canvas.addEventListener('mouseleave', ()=>requestAnimationFrame(()=>repinSelected(window._chart)));
   canvas.addEventListener('click', evt=>{
     const dragged = downPt && Math.hypot(evt.clientX-downPt.x, evt.clientY-downPt.y) > 5;
     downPt = null;
@@ -1051,12 +1063,7 @@ function renderChart(rows){
       interaction:{ mode:'nearest', intersect:true },
       onHover:(evt, elements, chart)=>{
         if(elements.length || !selectedSlug) return;
-        const f = findPoint(chart, selectedSlug); if(!f) return;
-        const active = chart.tooltip.getActiveElements();
-        if(active.length === 1 && active[0].datasetIndex === f.di && active[0].index === f.idx) return;
-        const el = chart.getDatasetMeta(f.di).data[f.idx];
-        chart.tooltip.setActiveElements([{datasetIndex:f.di, index:f.idx}], {x:el.x, y:el.y});
-        chart.update('none');
+        requestAnimationFrame(()=>repinSelected(chart));
       },
       scales:{
         x:{
