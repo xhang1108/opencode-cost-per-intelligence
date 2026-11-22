@@ -93,6 +93,7 @@
   .switch.labels .switch-opt{width:64px}
   .switch.disabled{opacity:var(--dim);cursor:default}
   .switch.disabled .switch-opt{pointer-events:none}
+  .switch.disabled .switch-thumb{opacity:0}
   button:disabled{opacity:var(--dim);cursor:default}
   .shape{display:inline-block;width:6px;height:6px;margin-right:6px;vertical-align:1px;flex:0 0 auto}
   .shape-square{background:var(--muted);box-shadow:0 0 0 1px var(--text)}
@@ -233,7 +234,7 @@
   <div class="foot">
     Go $/task = AA $/task × $10 / monthly limit; non-Go models at AA list price.<br/>
     Muse Spark appears twice: Meta standard at AA list price, and Go's Contributor price for the same model and Intelligence Index. AA's score is the Max effort run; the Contributor variant Go sells cannot use Max.<br/>
-    Beam appears twice: AA list price and Go's free tier ($0/task, no monthly allowance, limited regions and limited time). The free tier has daily request limits; it is shown at the left edge of the log-scale chart.<br/>
+    Beam appears twice in Go price: AA list price and Go's free tier ($0/task, no monthly allowance, limited regions and limited time, daily request cap). Free models are handled differently: $0 cannot sit on a log scale, so every $0 row is drawn in its own FREE column left of the cheapest paid price, with a dashed rule marking where the paid scale starts. In the combined view, Original price shows only the AA list-price row, so the free tier is not listed twice.<br/>
     <br/>
     <strong>Data sources</strong> — <a href="https://artificialanalysis.ai/data-api">AA Data API</a> (Intelligence Index, cost/task, list token prices) · <a href="https://opencode.ai/console/go">OpenCode Go</a> (monthly limits) · <a href="https://opencode.ai/docs/console/models/">OpenCode Console models</a> (actual token prices) · <a href="https://opencode.ai/inference/go/v1/models">Go models API</a>.<br/>
     <strong>Discount method</strong> — OpenCode does not always label a discount; it often just lowers the price. We use AA's list price per 1M tokens as the reference — the most widely accepted public price today — and compute discount = 1 − OpenCode actual price / AA list price. Where AA list pricing is unavailable, the struck-through Console list price is used as the reference. This applies to Go models only and leaves the Original (list) price untouched. We keep this method unless a dispute requires a change.<br/>
@@ -336,16 +337,32 @@ const syncDiscountAvailability = () => {
   const title = reason || DISCOUNT_TITLE;
   sw.classList.toggle('disabled', disabled);
   sw.title = title;
+  // A disabled switch must not claim a state the cost ignores (thumb hidden by
+  // CSS); a live one reports the option that matches discountOn.
+  if(disabled) sw.setAttribute('aria-disabled', 'true');
+  else sw.removeAttribute('aria-disabled');
+  const activeId = discountOn ? 'discountOn' : 'discountOff';
   sw.querySelectorAll('[data-opt]').forEach(b=>{
+    const on = !disabled && b.id === activeId;
     b.disabled = disabled;
     b.title = title;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', String(on));
   });
 };
-function chartBounds(ck){
+function chartBounds(ck, rows = data.rows){
+  // Axis spans stay stable across filters and hiding; only the free lane
+  // depends on what is actually drawn.
   const allX = data.rows.map(r=>r[ck]).filter(v=>v>0 && isFinite(v));
   const allY = data.rows.map(r=>r.intelligence_index).filter(v=>isFinite(v));
+  // $0 has no position on a log scale, so free rows get their own narrow
+  // column one decade left of the cheapest paid price.
+  const paidLo = Math.pow(10, Math.floor(Math.log10(Math.min(...allX))));
+  const hasFree = rows.some(r=>r[ck] === 0);
+  const xLo = hasFree ? paidLo / 10 : paidLo;
   return {
-    xLo: Math.pow(10, Math.floor(Math.log10(Math.min(...allX)))),
+    xLo, paidLo, hasFree,
+    freeX: hasFree ? xLo * Math.sqrt(10) : null,  // middle of the free decade
     xHi: Math.pow(10, Math.ceil(Math.log10(Math.max(...allX)))),
     yHi: Math.ceil(Math.max(...allY)/10)*10 + 10
   };
@@ -367,9 +384,16 @@ function updateBadges(){
 }
 
 function sourceRows(){
-  if(filter === 'go') return data.rows.filter(isGo);
-  if(filter === 'aa') return data.rows.filter(r=>!isGo(r));
-  return data.rows;
+  let rows;
+  if(filter === 'go') rows = data.rows.filter(isGo);
+  else if(filter === 'aa') rows = data.rows.filter(r=>!isGo(r));
+  else rows = data.rows;
+  // Original price is AA's list price. In the combined view the free row would
+  // land exactly on the AA row and read as a duplicate, so it is hidden there;
+  // the Go-only view still needs it (the AA row is filtered out by definition).
+  return (priceMode === 'original' && filter === 'all')
+    ? rows.filter(r=>r.pricing_mode !== 'go-free')
+    : rows;
 }
 function visibleRows(){
   return sourceRows().filter(r=>!hiddenModels.has(r.slug) && !hiddenCompanies.has(r.company));
@@ -385,7 +409,10 @@ function tableRows(){
   );
 }
 function pareto(rows, ck){
-  const sorted = rows.filter(r=>r[ck] > 0).sort((a,b)=>a[ck]-b[ck]);
+  // $0 rows count: a free model belongs at the start of the frontier. Among
+  // equal costs keep the highest Intelligence Index, so one free row starts it.
+  const sorted = rows.filter(r=>r[ck] != null && isFinite(r[ck]) && r[ck] >= 0)
+                     .sort((a,b)=>a[ck]-b[ck] || b.intelligence_index-a.intelligence_index);
   const out=[]; let bestII=-Infinity;
   for(const r of sorted){ if(r.intelligence_index > bestII){ out.push(r); bestII=r.intelligence_index; } }
   return out;
@@ -410,6 +437,10 @@ function notablePoints(cands, ck){
   const chosen = new Map();
   const add = c => { if(c && !chosen.has(c.r.slug)) chosen.set(c.r.slug, c); };
   const within = cands.filter(c=>c.r[ck] > 0 && isFinite(c.r[ck]));
+  // Label the Go free tier first: several $0 rows share the free column, and
+  // the Go offering should own the label rather than an AA $0 row beside it.
+  add(cands.filter(c=>c.r[ck] === 0 && isGo(c.r))
+            .sort((a,b)=>b.r.intelligence_index-a.r.intelligence_index)[0]);  // best Go free
   const value = c => c.r[ck] / c.r.intelligence_index;
   add(within.slice().sort((a,b)=>value(a)-value(b))[0]);                      // best value
   add(cands.slice().sort((a,b)=>b.r.intelligence_index-a.r.intelligence_index)[0]); // smartest
@@ -545,6 +576,32 @@ const labelPlugin = {
   }
 };
 
+// Marks the free column: its cost is exactly $0, not the cheapest paid price,
+// so a dashed rule separates it from the paid log scale.
+const freeLanePlugin = {
+  id:'freeLane',
+  afterDatasetsDraw(chart){
+    const b = chart.$bounds, xs = chart.scales.x, area = chart.chartArea;
+    if(!b || !b.hasFree || !xs || !area) return;
+    const ctx = chart.ctx;
+    const xFree = xs.getPixelForValue(b.freeX);
+    const xPay = xs.getPixelForValue(b.paidLo);
+    ctx.save();
+    if(xFree > area.left && xFree < area.right){
+      ctx.fillStyle = T.faint;
+      ctx.font = '500 9px '+MONO.family;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      ctx.fillText('FREE', Math.max(area.left + 14, xFree), area.top + 6);
+    }
+    if(xPay > area.left && xPay < area.right){
+      ctx.strokeStyle = T.stroke; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
+      ctx.beginPath(); ctx.moveTo(xPay, area.top); ctx.lineTo(xPay, area.bottom); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+    ctx.restore();
+  }
+};
+
 function findPoint(c, slug){
   if(!c || !slug) return null;
   for(let di=0; di<c.data.datasets.length; di++){
@@ -635,12 +692,18 @@ async function init(){
       xmin:c.options.scales.x.min, xmax:c.options.scales.x.max,
       ymin:c.options.scales.y.min, ymax:c.options.scales.y.max
     };
-    const ck = costKey(), b = chartBounds(ck);
-    const px = v => (v>0 && isFinite(v)) ? v : b.xLo;
-    const rows = filteredRows();
+    const ck = costKey(), rows = filteredRows();
+    const prevBounds = c.$bounds;
+    const b = chartBounds(ck, rows);
+    const px = v => (v>0 && isFinite(v)) ? v : (b.freeX != null ? b.freeX : b.xLo);
     const byLabel = new Map(c.data.datasets.map(d=>[d.label,d]));
     const companies = [...new Set(rows.map(r=>r.company))];
-    if(companies.some(co=>!byLabel.has(co))){ refresh(); return; }
+    const pointCount = c.data.datasets.reduce((n,d)=>d.type === 'line' ? n : n+d.data.length, 0);
+    // A price mode can hide/show the free row or the free column itself, which
+    // changes the point set or the axis, not just the x values.
+    if(companies.some(co=>!byLabel.has(co)) || pointCount !== rows.length
+       || (prevBounds && prevBounds.hasFree !== b.hasFree)){ refresh(); return; }
+    c.$bounds = b;
     c.options.plugins.zoom.limits.x = {min:b.xLo,max:b.xHi,minRange:0.0002};
     const pointSets = c.data.datasets.filter(d=>d.type !== 'line');
     const pfSet = byLabel.get('Pareto frontier');
@@ -674,7 +737,8 @@ async function init(){
       }));
       if(pfAnim) pfAnim.forEach(a=>{ a.p.x = a.from + (a.to-a.from)*e; });
       if(saved.xmin !== undefined){
-        c.options.scales.x.min = saved.xmin; c.options.scales.x.max = saved.xmax;
+        c.options.scales.x.min = Math.max(saved.xmin, b.xLo);
+        c.options.scales.x.max = saved.xmax;
         c.options.scales.y.min = saved.ymin; c.options.scales.y.max = saved.ymax;
       }
       if(k >= 1) labelEpoch++;   // re-lay out labels once the cost animation settles
@@ -697,6 +761,7 @@ async function init(){
     if(on === discountOn) return;
     discountOn = on;
     setSwitch(discountSwitch, on ? 0 : 1);
+    syncDiscountAvailability();  // keep aria-pressed in sync when the discount toggles
     renderTable();
     animateCostChange();
   };
@@ -917,7 +982,7 @@ function renderLegend(){
   document.getElementById('modelLegend').innerHTML = hidden.map(r=>
     `<button class="chip" data-unhide="${r.slug}" title="Restore">+ ${r.label || r.name}</button>`
   ).join('');
-  const total = data.rows.length, shown = visibleRows().length;
+  const total = sourceRows().length, shown = visibleRows().length;
   document.getElementById('hiddenCount').textContent = shown === total ? '' : `${total-shown} / ${total} models hidden`;
   document.getElementById('vendorsAll').disabled = hiddenCompanies.size === 0 && hiddenModels.size === 0;
   document.getElementById('vendorsNone').disabled = companies.length > 0 && companies.every(co=>hiddenCompanies.has(co));
@@ -957,8 +1022,9 @@ function renderChart(rows){
   if(window._chart) window._chart.destroy();
   labelEpoch++;
   const ck = costKey();
-  const {xLo,xHi,yHi} = chartBounds(ck);
-  const px = v => (v > 0 && isFinite(v)) ? v : xLo;
+  const b = chartBounds(ck, rows);
+  const {xLo,xHi,yHi,paidLo,freeX} = b;
+  const px = v => (v > 0 && isFinite(v)) ? v : (freeX != null ? freeX : xLo);
 
   const companies = [...new Set(rows.map(r=>r.company))].sort();
   const datasets = companies.map(co=>{
@@ -979,7 +1045,7 @@ function renderChart(rows){
   window._chart = new Chart(canvas, {
     type:'scatter',
     data:{ datasets },
-    plugins:[labelPlugin],
+    plugins:[labelPlugin, freeLanePlugin],
     options:{
       responsive:true, maintainAspectRatio:false, animation:false,
       interaction:{ mode:'nearest', intersect:true },
@@ -995,15 +1061,20 @@ function renderChart(rows){
       scales:{
         x:{
           type:'logarithmic',
+          min:xLo, max:xHi,
           title:{display:true,text:'COST / TASK ($) — '+(priceMode==='go'?'GO':'ORIGINAL'),color:T.faint,font:{family:MONO.family,size:10,weight:'500'}},
-          ticks:{color:T.faint,font:MONO,maxRotation:0,callback:v=>'$'+fmtTick(v)},
+          ticks:{color:T.faint,font:MONO,maxRotation:0,callback:v=>
+            (freeX != null && Math.abs(v - freeX) <= freeX * 1e-9) ? '$0' : '$'+fmtTick(v)},
           grid:{color:T.grid,lineWidth:.5,drawTicks:false},
           border:{display:false},
           afterBuildTicks(s){
-            const out=[], lo=Math.floor(Math.log10(s.min)), hi=Math.ceil(Math.log10(s.max));
+            const out=[];
+            if(freeX != null && freeX >= s.min*0.9999 && freeX <= s.max*1.0001) out.push({value:freeX});
+            const from=Math.max(s.min, paidLo);
+            const lo=Math.floor(Math.log10(from)), hi=Math.ceil(Math.log10(s.max));
             for(let e=lo;e<=hi;e++) for(const m of [1,2,5]){
               const v=m*Math.pow(10,e);
-              if(v>=s.min*0.9999 && v<=s.max*1.0001) out.push({value:v});
+              if(v>=from*0.9999 && v<=s.max*1.0001) out.push({value:v});
             }
             s.ticks=out;
           }
@@ -1044,6 +1115,7 @@ function renderChart(rows){
     }
   });
   const c0 = window._chart;
+  c0.$bounds = b;
   c0.options.scales.x.min = c0.scales.x.min; c0.options.scales.x.max = c0.scales.x.max;
   c0.options.scales.y.min = c0.scales.y.min; c0.options.scales.y.max = c0.scales.y.max;
   c0.update('none');
@@ -1058,8 +1130,10 @@ function syncChartData(rows){
     xmin:c.options.scales.x.min, xmax:c.options.scales.x.max,
     ymin:c.options.scales.y.min, ymax:c.options.scales.y.max
   };
-  const ck = costKey(), b = chartBounds(ck);
-  const px = v => (v>0 && isFinite(v)) ? v : b.xLo;
+  const ck = costKey(), prevBounds = c.$bounds, b = chartBounds(ck, rows);
+  const px = v => (v>0 && isFinite(v)) ? v : (b.freeX != null ? b.freeX : b.xLo);
+  const boundsChanged = !prevBounds || prevBounds.hasFree !== b.hasFree;
+  c.$bounds = b;
   const companies = [...new Set(rows.map(r=>r.company))].sort();
   const byLabel = new Map(c.data.datasets.map(d=>[d.label,d]));
   c.data.datasets = c.data.datasets.filter(d=>d.label === 'Pareto frontier' || companies.includes(d.label));
@@ -1080,9 +1154,13 @@ function syncChartData(rows){
   }
   pf.data = pareto(rows, ck).map(r=>({x:px(r[ck]), y:r.intelligence_index}));
   c.update('none');
-  if(saved.xmin !== undefined){
-    c.options.scales.x.min = saved.xmin; c.options.scales.x.max = saved.xmax;
+  if(saved.xmin !== undefined && !boundsChanged){
+    c.options.scales.x.min = Math.max(saved.xmin, b.xLo);
+    c.options.scales.x.max = saved.xmax;
     c.options.scales.y.min = saved.ymin; c.options.scales.y.max = saved.ymax;
+    c.update('none');
+  } else if(boundsChanged){
+    c.options.scales.x.min = b.xLo; c.options.scales.x.max = b.xHi;
     c.update('none');
   }
 }
@@ -1090,7 +1168,7 @@ function syncChartData(rows){
 function renderTable(){
   const ck = costKey();
   document.querySelector('th[data-k="cost"]').textContent = priceMode === 'go'
-    ? (discountOn && hasDiscount() ? 'Go $/task (disc.)' : 'Go $/task')
+    ? (discountOn && sourceRows().some(r=>r.console_discount_pct != null) ? 'Go $/task (disc.)' : 'Go $/task')
     : 'AA $/task';
   const frontier = new Set(pareto(filteredRows(), ck).map(r=>r.slug));
   const rows = tableRows().slice().sort((a,b)=>{
@@ -1105,7 +1183,7 @@ function renderTable(){
   document.querySelector('#tbl tbody').innerHTML = rows.length ? rows.map((r,i)=>
     `<tr data-slug="${r.slug}" class="${r.slug === selectedSlug ? 'selected' : ''} ${frontier.has(r.slug) ? 'frontier' : ''}">
       <td class="rank">${i+1}</td>
-      <td class="name">${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? '<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">Free</span>' : ''}${discountOn && r.console_discount_pct != null ? `<span class="go-badge discount" title="OpenCode Console pay-as-you-go discount">${r.console_discount_pct}% off</span>` : ''}</td>
+      <td class="name">${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? `<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">${priceMode === 'original' ? 'Free on Go' : 'Free'}</span>` : ''}${discountOn && priceMode === 'go' && r.console_discount_pct != null ? `<span class="go-badge discount" title="OpenCode Console pay-as-you-go discount">${r.console_discount_pct}% off</span>` : ''}</td>
       <td class="name"><i class="swatch table-swatch ${vendorClass(COLORS[r.company]?r.company:'Other')}"></i>${r.company}</td>
       <td class="num">${r.intelligence_index}</td>
       <td class="num">${r[ck] != null ? '$'+r[ck].toFixed(4) : '—'}</td>
