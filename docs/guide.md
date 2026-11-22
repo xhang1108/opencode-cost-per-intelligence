@@ -30,6 +30,8 @@ The discount is `1 − actual_price / list_price`. `fetch_aa.py` now stores AA's
 
 Current nodes: 2026-11-21 (Hy4 New limit added), 2026-11-22 (Go discounts added). Older no-change snapshots were dropped; they remain recoverable from git.
 
+The earliest node is the exception: `data/history/2026-11-21.json` (entry date 2026-11-21, build_date 2026-11-22) was seeded by hand from the pre-discount snapshot, so its entry date follows `snapshot_date` rather than `build_date`. Not every node is script-generated, and `save_history.py` will never re-emit that one — that is expected.
+
 ## Site controls
 
 - **Go price / Original price** — switches the chart's cost axis. Only Go price can be discounted; Original (AA list) price stays untouched.

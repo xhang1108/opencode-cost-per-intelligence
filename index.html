@@ -91,7 +91,8 @@
   .switch-opt.on{box-shadow:none;color:var(--text)}
   .switch.compact .switch-opt{width:120px;padding:6px 12px;font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase}
   .switch.labels .switch-opt{width:64px}
-  .switch.disabled{opacity:var(--dim)}
+  .switch.disabled{opacity:var(--dim);cursor:default}
+  .switch.disabled .switch-opt{pointer-events:none}
   button:disabled{opacity:var(--dim);cursor:default}
   .shape{display:inline-block;width:6px;height:6px;margin-right:6px;vertical-align:1px;flex:0 0 auto}
   .shape-square{background:var(--muted);box-shadow:0 0 0 1px var(--text)}
@@ -235,7 +236,7 @@
     Beam appears twice: AA list price and Go's free tier ($0/task, no monthly allowance, limited regions and limited time). The free tier has daily request limits; it is shown at the left edge of the log-scale chart.<br/>
     <br/>
     <strong>Data sources</strong> — <a href="https://artificialanalysis.ai/data-api">AA Data API</a> (Intelligence Index, cost/task, list token prices) · <a href="https://opencode.ai/console/go">OpenCode Go</a> (monthly limits) · <a href="https://opencode.ai/docs/console/models/">OpenCode Console models</a> (actual token prices) · <a href="https://opencode.ai/inference/go/v1/models">Go models API</a>.<br/>
-    <strong>Discount method</strong> — OpenCode does not always label a discount; it often just lowers the price. We use AA's list price per 1M tokens as the reference — the most widely accepted public price today — and compute discount = 1 − OpenCode actual price / AA list price. This applies to Go models only and leaves the Original (list) price untouched. We keep this method unless a dispute requires a change.<br/>
+    <strong>Discount method</strong> — OpenCode does not always label a discount; it often just lowers the price. We use AA's list price per 1M tokens as the reference — the most widely accepted public price today — and compute discount = 1 − OpenCode actual price / AA list price. Where AA list pricing is unavailable, the struck-through Console list price is used as the reference. This applies to Go models only and leaves the Original (list) price untouched. We keep this method unless a dispute requires a change.<br/>
     Static snapshot (not live) · <a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index">AA Intelligence Index</a> · <a href="https://opencode.ai/console/go">Go pricing</a> · unofficial, not affiliated with OpenCode / SST.
   </div>
 </main>
@@ -283,7 +284,7 @@ const COLORS = {
   Inkling:'#6BB6C7', Other:'#8A8F98'
 };
 
-let data = null, latestData = null, historyEntries = [], currentHistoryIndex = -1, filter = 'all', priceMode = 'go', discountOn = true, sortKey = 'cost', sortAsc = true, priceAnimTimer = null, selectedSlug = null, showLabels = true, searchQuery = '';
+let data = null, latestData = null, historyEntries = [], currentHistoryIndex = -1, loadedHistoryIndex = -1, filter = 'all', priceMode = 'go', discountOn = true, sortKey = 'cost', sortAsc = true, priceAnimTimer = null, selectedSlug = null, showLabels = true, searchQuery = '';
 const hiddenCompanies = new Set(), hiddenModels = new Set(), historySnapshots = new Map();
 let historyLoadTimer = null;
 
@@ -791,7 +792,7 @@ async function initHistory(){
   slider.max = String(historyEntries.length - 1);
   slider.value = String(historyEntries.length - 1);
   slider.step = '1';
-  currentHistoryIndex = historyEntries.length - 1;  // default: latest, already loaded
+  currentHistoryIndex = loadedHistoryIndex = historyEntries.length - 1;  // default: latest, already loaded
   document.getElementById('historyTicks').innerHTML = historyEntries.map((e,i)=>{
     const tip = (e.changes && e.changes.length) ? e.changes.join('\n') : e.date;
     const first = i === 0 ? '<em class="history-first">DAY 1</em>' : '';
@@ -842,7 +843,7 @@ function renderHistoryLabel(){
 function applySnapshot(snap){
   data = snap;
   data.rows.forEach(r=>{ r.company = companyOf(r); materializeDiscount(r); });
-  hiddenCompanies.clear(); hiddenModels.clear(); selectedSlug = null;
+  selectedSlug = null;  // hidden vendor/model sets survive snapshot switches (stale slugs are inert)
   updateBadges();
   syncDiscountAvailability();
   renderLegend();
@@ -853,6 +854,7 @@ function applySnapshot(snap){
 async function viewHistory(i){
   const e = historyEntries[i];
   if(!e) return;
+  if(i === loadedHistoryIndex) return;
   if(i === historyEntries.length - 1){ viewLatest(); return; }
   let snap = historySnapshots.get(e.date);
   if(!snap){
@@ -864,17 +866,18 @@ async function viewHistory(i){
     }catch(err){
       console.warn('Failed to load snapshot '+e.date+':', err);
       document.getElementById('historySlider').value = String(currentHistoryIndex);
+      renderHistoryLabel();
       return;
     }
   }
   applySnapshot(snap);
-  currentHistoryIndex = i;
+  currentHistoryIndex = loadedHistoryIndex = i;
   renderHistoryLabel();
 }
 
 function viewLatest(){
   if(latestData) applySnapshot(latestData);
-  currentHistoryIndex = historyEntries.length - 1;
+  currentHistoryIndex = loadedHistoryIndex = historyEntries.length - 1;
   document.getElementById('historySlider').value = String(currentHistoryIndex);
   renderHistoryLabel();
 }
@@ -944,6 +947,7 @@ function companyStyle(){
 
 function renderChart(rows){
   const canvas = document.getElementById('chart');
+  if(priceAnimTimer){ clearTimeout(priceAnimTimer); priceAnimTimer = null; }
   if(window._chart) window._chart.destroy();
   labelEpoch++;
   const ck = costKey();
@@ -1020,7 +1024,8 @@ function renderChart(rows){
             title:items=>items[0] && items[0].raw.r ? (items[0].raw.r.label || items[0].raw.r.name) : '',
             label:c=>{
               const r=c.raw.r; if(!r) return '';
-              return `${r.company} · II ${r.intelligence_index} · $${r[costKey()].toFixed(4)}/task`;
+              const v = r[costKey()];
+              return `${r.company} · II ${r.intelligence_index} · $${v != null && isFinite(v) ? v.toFixed(4) : '—'}/task`;
             }
           }
         },

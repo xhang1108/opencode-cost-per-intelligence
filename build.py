@@ -81,8 +81,10 @@ def match(name):
 # Console discount lookup. Keys in console-prices.json are already normalized names.
 console_norm = {norm(k): v for k, v in CONSOLE.items()}
 # AA Free API also carries list prices per 1M tokens (stored by fetch_aa.py since
-# 2026-11-22). Prefer that as the baseline; fall back to the strikethrough list
-# price in console-prices.json for older snapshots that lack AA pricing.
+# 2026-11-22). Use that AA list price as the discount baseline when available
+# (below: only when 0 < console input <= AA input); otherwise fall back to the
+# verified discount_pct recorded in console-prices.json, i.e. the "(N% off)" label
+# that fetch_console.py cross-checked against the struck-through prices.
 AA_PRICE = {m['slug']: (m.get('pricing') or {}) for m in AA['models'] if m.get('pricing')}
 
 def match_console(name):

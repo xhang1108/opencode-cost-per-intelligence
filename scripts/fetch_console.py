@@ -7,9 +7,12 @@ The models endpoint (https://opencode.ai/inference/v1/models) only lists the
 already-discounted prices, so the docs "## Pricing" table is the machine-readable
 source for the original (struck-through) list price and the discount ratio.
 
-Only rows that have BOTH an "(N% off)" label and struck-through prices
-"~~$X~~ $Y" are kept. The discount is a Console pay-as-you-go property and must
-NOT be mixed into Go subscription numbers (the Go API still shows list price).
+Only rows that have BOTH an "(N% off)" label and struck-through input and output
+prices "~~$X~~ $Y" are kept. Cached read is optional (the table prints "-" or
+"Free" on many rows); when it has no struck price, "cache_read" and
+"list_cache_read" are null. The discount is a Console pay-as-you-go property and
+must NOT be mixed into Go subscription numbers (the Go API still shows list
+price).
 
 Output: {"<normalized name>": {"discount_pct": 60, "name": "GLM 5.3",
          "input": 0.56, "output": 1.76, "cache_read": 0.104,
@@ -79,19 +82,29 @@ def main():
             continue
         label_pct = int(off.group(1))
 
-        # Input, output, cached-read are the first three price columns.
-        pairs = [parse_strike(c) for c in cols[1:4]]
-        if any(p is None for p in pairs):
-            sys.exit(f'console: discounted row {cols[0]!r} lacks struck-through prices — format changed')
-        (list_in, new_in), (list_out, new_out), (list_cache, new_cache) = pairs
-        if not (list_in and list_out and list_cache):
-            sys.exit(f'console: zero list price in row {cols[0]!r} — format changed')
+        # Input, output, cached-read are the first three price columns. Input and
+        # output are required; cached-read is optional because the live table
+        # prints '-' (or 'Free') on many rows.
+        in_pair, out_pair, cache_pair = (parse_strike(c) for c in cols[1:4])
+        if in_pair is None or out_pair is None:
+            sys.exit(f'console: discounted row {cols[0]!r} lacks struck-through input/output prices — format changed')
+        (list_in, new_in), (list_out, new_out) = in_pair, out_pair
+        if not (list_in and list_out):
+            sys.exit(f'console: zero list input/output price in row {cols[0]!r} — format changed')
 
         pct = round((1 - new_in / list_in) * 100)
-        # Output and cache-read must carry the same ratio as input.
-        for old, new in ((list_out, new_out), (list_cache, new_cache)):
-            if round((1 - new / old) * 100) != pct:
-                sys.exit(f'console: inconsistent discount in row {cols[0]!r} — format changed')
+        # Output must carry the same ratio as input.
+        if round((1 - new_out / list_out) * 100) != pct:
+            sys.exit(f'console: inconsistent discount in row {cols[0]!r} — format changed')
+        # Cached-read ratio is only checked when the cell actually has a price.
+        if cache_pair is None:
+            list_cache, new_cache = None, None
+        else:
+            list_cache, new_cache = cache_pair
+            if not list_cache:
+                sys.exit(f'console: zero list cache price in row {cols[0]!r} — format changed')
+            if round((1 - new_cache / list_cache) * 100) != pct:
+                sys.exit(f'console: inconsistent cache-read discount in row {cols[0]!r} — format changed')
         if pct != label_pct:
             sys.exit(f'console: row {cols[0]!r} label says {label_pct}% but prices say {pct}% — format changed')
 
