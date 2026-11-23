@@ -25,7 +25,7 @@
     "limited_regions": false
   },
   "GLM-5.3": {
-    "limit": 500.0,
+    "limit": 200.0,
     "contributor": false,
     "limited_regions": false
   },
@@ -94,15 +94,10 @@
     "contributor": false,
     "limited_regions": false
   },
-  "LongCat 2.5 Free": {
-    "limit": null,
-    "contributor": false,
-    "limited_regions": false
-  },
-  "LongCat-2.0": {
+  "LongCat 2.5 New": {
     "limit": 60.0,
     "contributor": false,
-    "limited_regions": false
+    "limited_regions": true
   },
   "MiMo-V2.6-Flash": {
     "limit": 60.0,

@@ -17,6 +17,14 @@
         "GLM-5.3 discount: none → 60%",
         "Gemini 4 Argon discount: none → 50%"
       ]
+    },
+    {
+      "date": "2026-11-23",
+      "snapshot_date": "2026-11-23",
+      "build_date": "2026-11-23",
+      "changes": [
+        "GLM-5.3 limit: 500 → 200"
+      ]
     }
   ]
 }

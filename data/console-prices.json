@@ -747,6 +747,17 @@
     "free": true,
     "label_pct": null
   },
+  "jev114": {
+    "name": "Jev 1.14",
+    "input": 0.042,
+    "output": 0.0,
+    "cache_read": null,
+    "list_input": null,
+    "list_output": null,
+    "list_cache_read": null,
+    "free": false,
+    "label_pct": null
+  },
   "kimik25": {
     "name": "Kimi K2.5",
     "input": 0.6,
@@ -789,17 +800,6 @@
     "list_output": null,
     "list_cache_read": null,
     "free": false,
-    "label_pct": null
-  },
-  "longcat25free": {
-    "name": "LongCat 2.5 Free",
-    "input": 0.0,
-    "output": 0.0,
-    "cache_read": 0.0,
-    "list_input": null,
-    "list_output": null,
-    "list_cache_read": null,
-    "free": true,
     "label_pct": null
   },
   "mimov26flashfree": {
