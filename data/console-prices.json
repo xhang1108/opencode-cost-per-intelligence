@@ -802,6 +802,17 @@
     "free": false,
     "label_pct": null
   },
+  "kimik31pro": {
+    "name": "Kimi K3.1 Pro",
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "list_input": null,
+    "list_output": null,
+    "list_cache_read": null,
+    "free": false,
+    "label_pct": null
+  },
   "mimov26flashfree": {
     "name": "MiMo-V2.6-Flash Free",
     "input": 0.0,

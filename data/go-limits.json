@@ -54,6 +54,11 @@
     "contributor": false,
     "limited_regions": false
   },
+  "HungerG Free New": {
+    "limit": null,
+    "contributor": false,
+    "limited_regions": false
+  },
   "Hy3": {
     "limit": 60.0,
     "contributor": false,
