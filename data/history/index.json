@@ -25,6 +25,14 @@
       "changes": [
         "GLM-5.3 limit: 500 → 200"
       ]
+    },
+    {
+      "date": "2026-11-25",
+      "snapshot_date": "2026-11-25",
+      "build_date": "2026-11-25",
+      "changes": [
+        "AA models removed: 1"
+      ]
     }
   ]
 }
