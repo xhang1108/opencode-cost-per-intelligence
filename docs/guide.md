@@ -5,7 +5,7 @@
 CI (`.github/workflows/refresh.yml`, daily 03:23 UTC) runs:
 
 1. `scripts/fetch_aa.py` — Artificial Analysis `cost_per_task` (list price) → `data/aa-models.json`
-2. `scripts/fetch_go.py` — Go monthly allowance from `opencode.ai/console/go.md` → `data/go-limits.json`
+2. `scripts/fetch_go.py` — Go monthly allowance from the public `opencode.ai/inference/go/v1/models` API (no key); `opencode.ai/console/go.md` supplies row names and a fallback for models the API omits → `data/go-limits.json`
 3. `scripts/fetch_console.py` — Console pay-as-you-go prices per model (actual, plus list price and discount label when present) from `opencode.ai/docs/console/models.md` → `data/console-prices.json`
 4. `build.py` — merges the three into `data/merged.json`
 5. `scripts/save_history.py` — stores a snapshot only when a meaningful fact changes

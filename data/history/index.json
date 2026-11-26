@@ -31,7 +31,8 @@
       "snapshot_date": "2026-11-25",
       "build_date": "2026-11-25",
       "changes": [
-        "AA models removed: 1"
+        "AA models removed: 1",
+        "Kimi K3.1 Pro limit: 15 → 60"
       ]
     }
   ]

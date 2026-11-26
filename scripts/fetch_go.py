@@ -1,8 +1,14 @@
-"""Fetch OpenCode Go allowances from the published Markdown page into data/go-limits.json.
+"""Fetch OpenCode Go allowances into data/go-limits.json.
 
-Source: https://opencode.ai/console/go.md  (listed in https://opencode.ai/llms.txt)
-There is no public JSON API for Go; the Markdown table is the machine-readable copy.
-Values are the Go plan monthly allowance in USD (e.g. "$15"); "∞" means unlimited.
+Two official sources, in order of authority:
+
+1. https://opencode.ai/inference/go/v1/models — the public model-list API (no key;
+   documented at https://opencode.ai/docs/console/api/models). Each Go model carries
+   `go.monthly_usage`, the live allowance per plan. This is the source of truth.
+2. https://opencode.ai/console/go.md — the Markdown price table. It supplies the model
+   names and badges, and a fallback for models the API omits. Its allowances can lag
+   behind the API (a promotional allowance may be live in the API but not yet in the page),
+   so every name matched in the API has its limit and flags replaced by the API values.
 
 The table appends badges to model names. "Contributor" and "Limited regions" are parsed
 into flags because they change what Go actually serves: Contributor mode is a
@@ -22,9 +28,11 @@ from datetime import datetime, timedelta, timezone
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 URL = 'https://opencode.ai/console/go.md'
+API_URL = 'https://opencode.ai/inference/go/v1/models'
 OUT = os.path.join(BASE, 'data', 'go-limits.json')
 META = os.path.join(BASE, 'data', 'fetched_at.json')
 MIN_MODELS = 20
+MIN_API_MODELS = 20
 REQUIRED = 'GLM-5.3'
 
 
@@ -60,6 +68,59 @@ def parse_allowance(cell):
     return float(m.group(1).replace(',', ''))
 
 
+def key(s):
+    """Normalized name for matching Markdown rows to API entries."""
+    return re.sub(r'[^a-z0-9]+', '', (s or '').lower())
+
+
+def fmt_limit(value):
+    return 'unlimited' if value is None else f'{value:g}'
+
+
+def api_models():
+    """Live Go allowances/flags from the public model-list API.
+
+    Returns {normalized name: {"limit": float|None, "contributor": bool,
+    "limited_regions": bool}}. Models without `go.monthly_usage` are skipped.
+    """
+    req = urllib.request.Request(
+        API_URL,
+        headers={'accept': 'application/json', 'user-agent': 'opencode-go-cost/1.0'},
+    )
+    with urllib.request.urlopen(req, timeout=60) as res:
+        body = json.load(res)
+
+    out = {}
+    for m in body.get('data') or []:
+        go = m.get('go') or {}
+        if 'monthly_usage' not in go:
+            continue
+        usage = go['monthly_usage'] or {}
+        limit = usage.get('go')
+        if limit is not None and not isinstance(limit, (int, float)):
+            sys.exit(f'go api: unreadable monthly_usage.go for {m.get("name")!r}: {limit!r}')
+        name = m.get('name') or ''
+        k = key(name)
+        if not k:
+            continue
+        rec = {
+            'limit': float(limit) if limit is not None else None,
+            'contributor': bool(go.get('training')),
+            'limited_regions': bool(go.get('limited_regions')),
+        }
+        out[k] = rec
+        # The Markdown parser keeps "Free"/"New" in names but strips "Contributor"
+        # into a flag; index that spelling too so both sources match.
+        plain = key(re.sub(r'\bcontributor\b', '', name, flags=re.I))
+        if plain != k:
+            out[plain] = rec
+
+    if len(out) < MIN_API_MODELS:
+        sys.exit(f'go api: only {len(out)} monthly allowances, expected >= {MIN_API_MODELS} '
+                 '— response format likely changed')
+    return out
+
+
 def main():
     req = urllib.request.Request(URL, headers={'accept': 'text/markdown', 'user-agent': 'opencode-go-cost/1.0'})
     with urllib.request.urlopen(req, timeout=60) as res:
@@ -84,6 +145,29 @@ def main():
     if REQUIRED not in limits:
         sys.exit(f'go: {REQUIRED!r} missing — page format likely changed')
 
+    # The Markdown table is the name list; the API owns the live numbers. A model
+    # can be promoted in the API while the page still shows the old allowance.
+    api = api_models()
+    api_only = set(api)
+    overlaid, missing, changed = 0, [], []
+    for name, rec in limits.items():
+        k = key(name)
+        candidates = (k, k[:-3] if k.endswith('new') else k)
+        hit = next((api[c] for c in candidates if c in api), None)
+        if hit is None:
+            missing.append(name)
+            continue
+        for c in candidates:
+            api_only.discard(c)
+        if rec['limit'] != hit['limit']:
+            changed.append(f'{name}: {fmt_limit(rec["limit"])} -> {fmt_limit(hit["limit"])}')
+        rec['limit'] = hit['limit']
+        rec['contributor'] = hit['contributor']
+        rec['limited_regions'] = hit['limited_regions']
+        overlaid += 1
+    if REQUIRED in missing:
+        sys.exit(f'go api: {REQUIRED!r} missing — response format likely changed')
+
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(dict(sorted(limits.items())), f, ensure_ascii=False, indent=2)
 
@@ -98,6 +182,10 @@ def main():
     print(f'go: {len(limits)} models, {sum(1 for v in limits.values() if v["limit"] is None)} unlimited, '
           f'{sum(1 for v in limits.values() if v["contributor"])} contributor, '
           f'{sum(1 for v in limits.values() if v["limited_regions"])} limited regions')
+    print(f'go api: {overlaid} overlaid, {len(missing)} page-only ({", ".join(missing) or "none"}), '
+          f'{len(api_only)} api-only')
+    if changed:
+        print('go api overrides: ' + ', '.join(changed))
 
 
 if __name__ == '__main__':

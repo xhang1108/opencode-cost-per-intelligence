@@ -11,10 +11,10 @@ Cost per intelligence point for every model on OpenCode Go pricing.
 | File | Content |
 |---|---|
 | `data/aa-models.json` | Intelligence Index, cost per task, output tok/s — Artificial Analysis free API |
-| `data/go-limits.json` | Go monthly allowance per model, plus `contributor` / `limited_regions` flags parsed from the page badges |
+| `data/go-limits.json` | Go monthly allowance per model from the public Go model-list API, with `contributor` / `limited_regions` flags; Markdown rows supply names and a fallback |
 | `data/merged.json` | Joined rows + `snapshot_date`, from `python build.py` — each row carries `pricing_mode`, `aa_cost_per_task_used` and `go_limited_regions` |
 
-A snapshot, not a live feed. Current numbers: [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index) · [Go pricing](https://opencode.ai/console/go)
+A snapshot, not a live feed. Current numbers: [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index) · [Go allowances](https://opencode.ai/inference/go/v1/models) · [Go pricing](https://opencode.ai/console/go)
 
 ## Method
 
