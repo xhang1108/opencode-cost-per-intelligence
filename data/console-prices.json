@@ -978,6 +978,17 @@
     "free": false,
     "label_pct": null
   },
+  "seaglassalphafree": {
+    "name": "Seaglass Alpha Free",
+    "input": 0.0,
+    "output": 0.0,
+    "cache_read": 0.0,
+    "list_input": null,
+    "list_output": null,
+    "list_cache_read": null,
+    "free": true,
+    "label_pct": null
+  },
   "tidepoolalphafree": {
     "name": "Tidepool Alpha Free",
     "input": 0.0,
