@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>OpenCode Go × AA — Cost per Intelligence</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <meta name="theme-color" content="#0c0c0c" />
@@ -48,6 +48,7 @@
   .history-tick{padding:0 2px;white-space:nowrap;cursor:help}
   .history-tick.current{color:var(--text)}
   .history-tick[data-i]{cursor:pointer}
+  .tick-short{display:none}
   .history-first{display:inline-block;margin-left:6px;padding:0 4px;border:.5px solid var(--accent);border-radius:3px;font-style:normal;font-size:9px;color:var(--accent)}
   .head-switches{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .switch[hidden]{display:none!important}
@@ -66,6 +67,7 @@
   .chart-empty[hidden]{display:none}
   td.empty{color:var(--faint);font-family:var(--mono);font-size:11px;padding:24px 10px}
   .swatch{width:6px;height:6px;border-radius:1px;display:inline-block;flex:0 0 auto;background:var(--swatch,var(--faint))}
+  .name-swatch,.ii-inline{display:none}
   .table-swatch{margin-right:6px}
   .legend{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:8px;line-height:1.7}
   .legend-frontier{font-family:var(--mono);font-size:10px;color:var(--warning)}
@@ -98,7 +100,38 @@
   .shape{display:inline-block;width:6px;height:6px;margin-right:6px;vertical-align:1px;flex:0 0 auto}
   .shape-square{background:var(--muted);box-shadow:0 0 0 1px var(--text)}
   .shape-circle{border-radius:50%;background:var(--muted)}
-  @media (max-width:520px){.switch.hero{width:100%}}
+  @media (max-width:640px){
+    header,main{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+    header{padding-top:max(24px,env(safe-area-inset-top))}
+    .foot{padding-bottom:max(16px,env(safe-area-inset-bottom))}
+    .panel{padding:12px}
+    .stats{gap:16px}
+    h1{font-size:22px}
+    .head-switches{display:block;width:100%}
+    .head-switches .switch{width:100%;margin-bottom:8px}
+    .switch-name{display:block;margin:0 0 4px}
+    .switch-opt{flex:1 1 0;min-width:0;width:auto;padding:10px 8px;overflow:hidden;text-overflow:ellipsis}
+    .switch.compact .switch-opt{padding:10px 6px;font-size:11px}
+    .toggle-row{width:100%;margin-left:0;justify-content:flex-end;flex-wrap:wrap}
+    .toolbar .switch,#filterSwitch{width:100%}
+    .search input{width:100%;height:36px;font-size:12px}
+    .table-tools{width:100%}
+    .act{min-height:32px;padding:8px 10px;font-size:11px}
+    .hide-btn{opacity:1;min-width:30px;min-height:30px;padding:6px 8px;font-size:13px}
+    .chip{min-height:32px;padding:8px 10px}
+    .history-slider{height:28px;margin:8px 0 4px}
+    .history-slider::-webkit-slider-thumb{width:20px;height:20px}
+    .history-slider::-moz-range-thumb{width:20px;height:20px;border:0}
+    .history-tick{padding:8px 2px}
+    .tick-full{display:none}
+    .tick-short{display:inline}
+    #tbl th:nth-child(3),#tbl td:nth-child(3),#tbl th:nth-child(4),#tbl td:nth-child(4){display:none}
+    th,td{padding:8px 6px}
+    td.name{overflow-wrap:anywhere}
+    .name-swatch{display:inline-block}
+    .ii-inline{display:block;margin-top:2px;color:var(--faint);font-size:11px}
+    .badge,.stat,.switch-name,.note,.history-ticks,.history-first,.legend,.legend-frontier,th,.foot,.go-badge,.chip{font-size:11px}
+  }
   @media (prefers-reduced-motion:reduce){.switch-thumb{transition:none}}
   table{width:100%;border-collapse:collapse;font-size:12px}
   th,td{padding:8px 10px;border-bottom:.5px solid var(--border-muted);text-align:left}
@@ -875,7 +908,7 @@ async function initHistory(){
   document.getElementById('historyTicks').innerHTML = historyEntries.map((e,i)=>{
     const tip = (e.changes && e.changes.length) ? e.changes.join('\n') : e.date;
     const first = i === 0 ? '<em class="history-first">DAY 1</em>' : '';
-    return `<span class="history-tick" data-i="${i}" title="${esc(tip)}">${esc(fmtDay(e.date))}${first}</span>`;
+    return `<span class="history-tick" data-i="${i}" title="${esc(tip)}"><span class="tick-full">${esc(fmtDay(e.date))}</span><span class="tick-short">${esc(fmtDayShort(e.date))}</span>${first}</span>`;
   }).join('');
   renderHistoryLabel();
   // Update the label immediately; load the snapshot shortly after the drag
@@ -904,6 +937,10 @@ const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV
 const fmtDay = iso => {
   const [y,m,d] = String(iso || '').split('-');
   return (y && m && d) ? `${d} ${MONTHS[+m-1]} ${y}` : (iso || '—');
+};
+const fmtDayShort = iso => {
+  const [y,m,d] = String(iso || '').split('-');
+  return (y && m && d) ? `${d} ${MONTHS[+m-1]}` : (iso || '—');
 };
 function renderHistoryLabel(){
   const slider = document.getElementById('historySlider');
@@ -1190,7 +1227,7 @@ function renderTable(){
   document.querySelector('#tbl tbody').innerHTML = rows.length ? rows.map((r,i)=>
     `<tr data-slug="${r.slug}" class="${r.slug === selectedSlug ? 'selected' : ''} ${frontier.has(r.slug) ? 'frontier' : ''}">
       <td class="rank">${i+1}</td>
-      <td class="name">${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? `<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">${priceMode === 'original' ? 'Free on Go' : 'Free'}</span>` : ''}${discountOn && priceMode === 'go' && r.console_discount_pct != null ? `<span class="go-badge discount" title="OpenCode Console pay-as-you-go discount">${r.console_discount_pct}% off</span>` : ''}</td>
+      <td class="name"><i class="swatch table-swatch name-swatch ${vendorClass(COLORS[r.company]?r.company:'Other')}"></i>${r.name}${isGo(r) ? '<span class="go-badge">Go</span>' : ''}${r.pricing_mode === 'go-contributor' ? '<span class="go-badge contrib" title="Go sells Meta Contributor mode: prompts and responses may be used to train Meta models. Priced at the Go Contributor rate; the Intelligence Index is from a Max-effort run this variant cannot use.">Contributor</span>' : ''}${r.pricing_mode === 'go-free' ? `<span class="go-badge" title="Go free tier: $0/task, no monthly allowance; limited regions and limited time, with a daily request cap.">${priceMode === 'original' ? 'Free on Go' : 'Free'}</span>` : ''}${discountOn && priceMode === 'go' && r.console_discount_pct != null ? `<span class="go-badge discount" title="OpenCode Console pay-as-you-go discount">${r.console_discount_pct}% off</span>` : ''}<span class="ii-inline">II ${r.intelligence_index}</span></td>
       <td class="name"><i class="swatch table-swatch ${vendorClass(COLORS[r.company]?r.company:'Other')}"></i>${r.company}</td>
       <td class="num">${r.intelligence_index}</td>
       <td class="num">${r[ck] != null ? '$'+r[ck].toFixed(4) : '—'}</td>
