@@ -34,6 +34,14 @@
         "AA models removed: 1",
         "Kimi K3.1 Pro limit: 15 → 60"
       ]
+    },
+    {
+      "date": "2026-11-27",
+      "snapshot_date": "2026-11-27",
+      "build_date": "2026-11-27",
+      "changes": [
+        "AA models added: 3"
+      ]
     }
   ]
 }

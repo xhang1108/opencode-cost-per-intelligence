@@ -47,14 +47,14 @@
       "name": "Agnes 2.5 Pro Theta",
       "slug": "agnes-2-5-pro-theta",
       "intelligence_index": 24.1,
-      "cost_per_task": 0.5747,
+      "cost_per_task": 0.4515,
       "pricing": {
         "price_1m_input_tokens": 0.1,
         "price_1m_output_tokens": 0.3,
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 184,
+      "median_output_tokens_per_second": 179.43,
       "release_date": "2026-11-07"
     },
     {
@@ -96,7 +96,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 177.27,
+      "median_output_tokens_per_second": 175.82,
       "release_date": "2026-08-30"
     },
     {
@@ -166,7 +166,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 1575.49,
+      "median_output_tokens_per_second": 1675.18,
       "release_date": "2026-07-24"
     },
     {
@@ -348,7 +348,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 90.23,
+      "median_output_tokens_per_second": 87.14,
       "release_date": "2025-10-15"
     },
     {
@@ -362,7 +362,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 94.26,
+      "median_output_tokens_per_second": 95.83,
       "release_date": "2025-10-15"
     },
     {
@@ -376,7 +376,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": 3.75
       },
-      "median_output_tokens_per_second": 46.26,
+      "median_output_tokens_per_second": 48.85,
       "release_date": "2025-09-29"
     },
     {
@@ -390,7 +390,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": 3.75
       },
-      "median_output_tokens_per_second": 52.53,
+      "median_output_tokens_per_second": 54.75,
       "release_date": "2025-09-29"
     },
     {
@@ -460,7 +460,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 66.96,
+      "median_output_tokens_per_second": 71.65,
       "release_date": "2026-06-09"
     },
     {
@@ -474,7 +474,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 67.72,
+      "median_output_tokens_per_second": 69.53,
       "release_date": "2026-09-01"
     },
     {
@@ -488,7 +488,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 57.29,
+      "median_output_tokens_per_second": 59.35,
       "release_date": "2026-09-01"
     },
     {
@@ -502,7 +502,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 57.41,
+      "median_output_tokens_per_second": 57.51,
       "release_date": "2026-09-01"
     },
     {
@@ -516,7 +516,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 58.67,
+      "median_output_tokens_per_second": 60.02,
       "release_date": "2026-09-01"
     },
     {
@@ -530,7 +530,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 63.7,
+      "median_output_tokens_per_second": 67.07,
       "release_date": "2026-09-01"
     },
     {
@@ -544,7 +544,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 90.78,
+      "median_output_tokens_per_second": 90.43,
       "release_date": "2026-11-09"
     },
     {
@@ -558,7 +558,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 81.6,
+      "median_output_tokens_per_second": 84.03,
       "release_date": "2026-11-09"
     },
     {
@@ -572,7 +572,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 79.67,
+      "median_output_tokens_per_second": 82.8,
       "release_date": "2026-11-09"
     },
     {
@@ -586,7 +586,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 82.36,
+      "median_output_tokens_per_second": 83.23,
       "release_date": "2026-11-09"
     },
     {
@@ -600,7 +600,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 85.22,
+      "median_output_tokens_per_second": 86.72,
       "release_date": "2026-11-09"
     },
     {
@@ -614,7 +614,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 225.78,
+      "median_output_tokens_per_second": 228.19,
       "release_date": "2026-10-07"
     },
     {
@@ -628,7 +628,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 173.92,
+      "median_output_tokens_per_second": 183.25,
       "release_date": "2026-10-07"
     },
     {
@@ -642,7 +642,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 164.43,
+      "median_output_tokens_per_second": 170.87,
       "release_date": "2026-10-07"
     },
     {
@@ -656,7 +656,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 165.84,
+      "median_output_tokens_per_second": 178.94,
       "release_date": "2026-10-07"
     },
     {
@@ -670,7 +670,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 181.63,
+      "median_output_tokens_per_second": 184.15,
       "release_date": "2026-10-07"
     },
     {
@@ -698,7 +698,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 51.48,
+      "median_output_tokens_per_second": 52.28,
       "release_date": "2025-11-24"
     },
     {
@@ -712,7 +712,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 55.57,
+      "median_output_tokens_per_second": 62.72,
       "release_date": "2025-11-24"
     },
     {
@@ -754,7 +754,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 55.88,
+      "median_output_tokens_per_second": 58.43,
       "release_date": "2026-04-16"
     },
     {
@@ -782,7 +782,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 60.77,
+      "median_output_tokens_per_second": 65.81,
       "release_date": "2026-05-28"
     },
     {
@@ -796,7 +796,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 51.47,
+      "median_output_tokens_per_second": 56.79,
       "release_date": "2026-07-24"
     },
     {
@@ -810,7 +810,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 97.17,
+      "median_output_tokens_per_second": 97.93,
       "release_date": "2026-09-22"
     },
     {
@@ -824,7 +824,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 82.45,
+      "median_output_tokens_per_second": 85.38,
       "release_date": "2026-09-22"
     },
     {
@@ -838,7 +838,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 83.73,
+      "median_output_tokens_per_second": 85.23,
       "release_date": "2026-09-22"
     },
     {
@@ -852,7 +852,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 83.27,
+      "median_output_tokens_per_second": 84.55,
       "release_date": "2026-09-22"
     },
     {
@@ -866,7 +866,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 84.71,
+      "median_output_tokens_per_second": 88.23,
       "release_date": "2026-09-22"
     },
     {
@@ -880,7 +880,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 51.74,
+      "median_output_tokens_per_second": 53.49,
       "release_date": "2026-07-24"
     },
     {
@@ -894,7 +894,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 52.04,
+      "median_output_tokens_per_second": 55.42,
       "release_date": "2026-07-24"
     },
     {
@@ -908,7 +908,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 51.33,
+      "median_output_tokens_per_second": 53.4,
       "release_date": "2026-07-24"
     },
     {
@@ -922,7 +922,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": 6.25
       },
-      "median_output_tokens_per_second": 51.54,
+      "median_output_tokens_per_second": 55.58,
       "release_date": "2026-07-24"
     },
     {
@@ -936,7 +936,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": 3.75
       },
-      "median_output_tokens_per_second": 47.15,
+      "median_output_tokens_per_second": 48.7,
       "release_date": "2026-02-17"
     },
     {
@@ -950,7 +950,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": 3.75
       },
-      "median_output_tokens_per_second": 63.31,
+      "median_output_tokens_per_second": 62.83,
       "release_date": "2026-02-17"
     },
     {
@@ -964,7 +964,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": 3.75
       },
-      "median_output_tokens_per_second": 48.9,
+      "median_output_tokens_per_second": 52.01,
       "release_date": "2026-02-17"
     },
     {
@@ -978,7 +978,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 83.06,
+      "median_output_tokens_per_second": 82.98,
       "release_date": "2026-06-30"
     },
     {
@@ -992,7 +992,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 132.88,
+      "median_output_tokens_per_second": 130.89,
       "release_date": "2026-09-28"
     },
     {
@@ -1006,7 +1006,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 108.94,
+      "median_output_tokens_per_second": 115.4,
       "release_date": "2026-09-28"
     },
     {
@@ -1020,7 +1020,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 105.47,
+      "median_output_tokens_per_second": 110.74,
       "release_date": "2026-09-28"
     },
     {
@@ -1034,7 +1034,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 104.74,
+      "median_output_tokens_per_second": 108.01,
       "release_date": "2026-09-28"
     },
     {
@@ -1048,7 +1048,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 108.79,
+      "median_output_tokens_per_second": 112.1,
       "release_date": "2026-09-28"
     },
     {
@@ -1062,7 +1062,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 63.33,
+      "median_output_tokens_per_second": 73.97,
       "release_date": "2026-06-30"
     },
     {
@@ -1076,7 +1076,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 67.53,
+      "median_output_tokens_per_second": 74.42,
       "release_date": "2026-06-30"
     },
     {
@@ -1090,7 +1090,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 63.7,
+      "median_output_tokens_per_second": 74.55,
       "release_date": "2026-06-30"
     },
     {
@@ -1104,7 +1104,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 67.79,
+      "median_output_tokens_per_second": 71.17,
       "release_date": "2026-06-30"
     },
     {
@@ -1118,7 +1118,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 66.8,
+      "median_output_tokens_per_second": 74.03,
       "release_date": "2026-06-30"
     },
     {
@@ -1160,7 +1160,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 238.87,
+      "median_output_tokens_per_second": 230.25,
       "release_date": "2026-05-20"
     },
     {
@@ -1286,7 +1286,7 @@
         "price_1m_cache_hit_tokens": 1.675,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 26.91,
+      "median_output_tokens_per_second": 29.61,
       "release_date": "2025-05-28"
     },
     {
@@ -1300,7 +1300,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 166.05,
+      "median_output_tokens_per_second": 158.91,
       "release_date": "2025-01-20"
     },
     {
@@ -1440,7 +1440,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 51.38,
+      "median_output_tokens_per_second": 44.34,
       "release_date": "2024-12-26"
     },
     {
@@ -1468,7 +1468,7 @@
         "price_1m_cache_hit_tokens": 0.38,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 96.92,
+      "median_output_tokens_per_second": 93.44,
       "release_date": "2025-08-21"
     },
     {
@@ -1482,7 +1482,7 @@
         "price_1m_cache_hit_tokens": 0.3575,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 121.84,
+      "median_output_tokens_per_second": 135.27,
       "release_date": "2025-08-21"
     },
     {
@@ -1594,7 +1594,7 @@
         "price_1m_cache_hit_tokens": 0.006,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 211.56,
+      "median_output_tokens_per_second": 220.81,
       "release_date": "2026-09-10"
     },
     {
@@ -1608,7 +1608,7 @@
         "price_1m_cache_hit_tokens": 0.006,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 183.74,
+      "median_output_tokens_per_second": 189.86,
       "release_date": "2026-10-17"
     },
     {
@@ -1622,7 +1622,7 @@
         "price_1m_cache_hit_tokens": 0.006,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 182.06,
+      "median_output_tokens_per_second": 200.57,
       "release_date": "2026-10-17"
     },
     {
@@ -1636,7 +1636,7 @@
         "price_1m_cache_hit_tokens": 0.006,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 181.94,
+      "median_output_tokens_per_second": 188.14,
       "release_date": "2026-10-17"
     },
     {
@@ -1650,7 +1650,7 @@
         "price_1m_cache_hit_tokens": 0.0065,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 254.87,
+      "median_output_tokens_per_second": 283.1,
       "release_date": "2026-09-10"
     },
     {
@@ -1664,7 +1664,7 @@
         "price_1m_cache_hit_tokens": 0.028,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 141.51,
+      "median_output_tokens_per_second": 152.71,
       "release_date": "2026-07-31"
     },
     {
@@ -1678,7 +1678,7 @@
         "price_1m_cache_hit_tokens": 0.0235,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 97.41,
+      "median_output_tokens_per_second": 110.28,
       "release_date": "2026-04-24"
     },
     {
@@ -1720,7 +1720,7 @@
         "price_1m_cache_hit_tokens": 0.014,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 171.7,
+      "median_output_tokens_per_second": 179.43,
       "release_date": "2026-08-21"
     },
     {
@@ -1734,7 +1734,7 @@
         "price_1m_cache_hit_tokens": 0.044,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 76.11,
+      "median_output_tokens_per_second": 76.04,
       "release_date": "2026-08-13"
     },
     {
@@ -1748,7 +1748,7 @@
         "price_1m_cache_hit_tokens": 0.135,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 78.65,
+      "median_output_tokens_per_second": 79.16,
       "release_date": "2026-04-24"
     },
     {
@@ -1776,7 +1776,7 @@
         "price_1m_cache_hit_tokens": 0.145,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 163.86,
+      "median_output_tokens_per_second": 155.2,
       "release_date": "2026-04-24"
     },
     {
@@ -1804,7 +1804,7 @@
         "price_1m_cache_hit_tokens": 0.044,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 73.22,
+      "median_output_tokens_per_second": 73.02,
       "release_date": "2026-08-13"
     },
     {
@@ -1932,6 +1932,20 @@
       },
       "median_output_tokens_per_second": null,
       "release_date": "2025-11-13"
+    },
+    {
+      "name": "ERNIE 5.5 Flash Preview",
+      "slug": "ernie-5-5-flash",
+      "intelligence_index": 31.3,
+      "cost_per_task": 1.1432,
+      "pricing": {
+        "price_1m_input_tokens": 0.28,
+        "price_1m_output_tokens": 1.13,
+        "price_1m_cache_hit_tokens": 0.028,
+        "price_1m_cache_write_tokens": null
+      },
+      "median_output_tokens_per_second": 234.49,
+      "release_date": "2026-11-23"
     },
     {
       "name": "Exaone 4.0 1.2B (Non-reasoning)",
@@ -2266,7 +2280,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 206.98,
+      "median_output_tokens_per_second": 202.92,
       "release_date": "2025-05-20"
     },
     {
@@ -2294,7 +2308,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 265.64,
+      "median_output_tokens_per_second": 269.15,
       "release_date": "2025-06-17"
     },
     {
@@ -2336,7 +2350,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 383.25,
+      "median_output_tokens_per_second": 406.9,
       "release_date": "2025-06-17"
     },
     {
@@ -2378,7 +2392,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 210.18,
+      "median_output_tokens_per_second": 207.26,
       "release_date": "2025-05-20"
     },
     {
@@ -2406,7 +2420,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 131.24,
+      "median_output_tokens_per_second": 133.49,
       "release_date": "2025-06-05"
     },
     {
@@ -2441,14 +2455,14 @@
       "name": "Gemini 3.1 Flash-Lite",
       "slug": "gemini-3-1-flash-lite-preview",
       "intelligence_index": 6.2,
-      "cost_per_task": 0.1945,
+      "cost_per_task": 0.2065,
       "pricing": {
         "price_1m_input_tokens": 0.25,
         "price_1m_output_tokens": 1.5,
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 305.04,
+      "median_output_tokens_per_second": 372.41,
       "release_date": "2026-03-03"
     },
     {
@@ -2462,7 +2476,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 154.42,
+      "median_output_tokens_per_second": 159.65,
       "release_date": "2026-02-19"
     },
     {
@@ -2476,7 +2490,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 190.95,
+      "median_output_tokens_per_second": 198.09,
       "release_date": "2026-05-19"
     },
     {
@@ -2490,7 +2504,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 415.41,
+      "median_output_tokens_per_second": 444.2,
       "release_date": "2026-07-21"
     },
     {
@@ -2504,7 +2518,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 191.67,
+      "median_output_tokens_per_second": 188.69,
       "release_date": "2026-05-19"
     },
     {
@@ -2518,7 +2532,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 183.55,
+      "median_output_tokens_per_second": 184.94,
       "release_date": "2026-05-19"
     },
     {
@@ -2532,7 +2546,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 193,
+      "median_output_tokens_per_second": 201.5,
       "release_date": "2026-07-21"
     },
     {
@@ -2581,14 +2595,14 @@
       "name": "Gemini 3.8 Flash (High)",
       "slug": "gemini-3-8-flash",
       "intelligence_index": 30.7,
-      "cost_per_task": 7.766,
+      "cost_per_task": 3.0217,
       "pricing": {
         "price_1m_input_tokens": 0.75,
         "price_1m_output_tokens": 3.75,
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": 0.75
       },
-      "median_output_tokens_per_second": 117.17,
+      "median_output_tokens_per_second": 131.9,
       "release_date": "2026-09-02"
     },
     {
@@ -2602,21 +2616,21 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": 0.75
       },
-      "median_output_tokens_per_second": 114.85,
+      "median_output_tokens_per_second": 127.16,
       "release_date": "2026-09-02"
     },
     {
       "name": "Gemini 3.8 Flash (Medium)",
       "slug": "gemini-3-8-flash-medium",
       "intelligence_index": 30.1,
-      "cost_per_task": 6.2586,
+      "cost_per_task": 2.6064,
       "pricing": {
         "price_1m_input_tokens": 0.75,
         "price_1m_output_tokens": 3.75,
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": 0.75
       },
-      "median_output_tokens_per_second": 114.75,
+      "median_output_tokens_per_second": 127.26,
       "release_date": "2026-09-02"
     },
     {
@@ -2644,7 +2658,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 227.89,
+      "median_output_tokens_per_second": 232.27,
       "release_date": "2025-12-17"
     },
     {
@@ -2658,7 +2672,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 223.74,
+      "median_output_tokens_per_second": 233.71,
       "release_date": "2025-12-17"
     },
     {
@@ -2693,14 +2707,14 @@
       "name": "Gemini 4 Argon (High)",
       "slug": "gemini-4-argon",
       "intelligence_index": 50.5,
-      "cost_per_task": 9.9466,
+      "cost_per_task": 7.0616,
       "pricing": {
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20,
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 93.35,
+      "median_output_tokens_per_second": 99.21,
       "release_date": "2026-09-30"
     },
     {
@@ -2714,7 +2728,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 87.26,
+      "median_output_tokens_per_second": 94.41,
       "release_date": "2026-09-30"
     },
     {
@@ -2728,7 +2742,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 4
       },
-      "median_output_tokens_per_second": 79.51,
+      "median_output_tokens_per_second": 75.6,
       "release_date": "2026-10-28"
     },
     {
@@ -2742,7 +2756,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 4
       },
-      "median_output_tokens_per_second": 74.43,
+      "median_output_tokens_per_second": 75.23,
       "release_date": "2026-10-28"
     },
     {
@@ -2770,7 +2784,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 216.18,
+      "median_output_tokens_per_second": 216.81,
       "release_date": "2026-11-12"
     },
     {
@@ -2784,21 +2798,21 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 208.31,
+      "median_output_tokens_per_second": 213.75,
       "release_date": "2026-11-12"
     },
     {
       "name": "Gemini 4 Hydrogen (Low)",
       "slug": "gemini-4-hydrogen-low",
       "intelligence_index": 26.9,
-      "cost_per_task": 0.2922,
+      "cost_per_task": 0.3674,
       "pricing": {
         "price_1m_input_tokens": 1.5,
         "price_1m_output_tokens": 7.5,
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 228.53,
+      "median_output_tokens_per_second": 234.03,
       "release_date": "2026-11-12"
     },
     {
@@ -2812,7 +2826,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 213.28,
+      "median_output_tokens_per_second": 228.63,
       "release_date": "2026-11-12"
     },
     {
@@ -2826,7 +2840,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": 3
       },
-      "median_output_tokens_per_second": 123.55,
+      "median_output_tokens_per_second": 125.35,
       "release_date": "2026-11-18"
     },
     {
@@ -2840,21 +2854,21 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": 3
       },
-      "median_output_tokens_per_second": 111.58,
+      "median_output_tokens_per_second": 120.7,
       "release_date": "2026-11-18"
     },
     {
       "name": "Gemini 4 Neon (Low)",
       "slug": "gemini-4-neon-low",
       "intelligence_index": 44.1,
-      "cost_per_task": 0.7452,
+      "cost_per_task": 0.8819,
       "pricing": {
         "price_1m_input_tokens": 3,
         "price_1m_output_tokens": 15,
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": 3
       },
-      "median_output_tokens_per_second": 119.15,
+      "median_output_tokens_per_second": 121.71,
       "release_date": "2026-11-18"
     },
     {
@@ -2868,7 +2882,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": 3
       },
-      "median_output_tokens_per_second": 120.78,
+      "median_output_tokens_per_second": 124.8,
       "release_date": "2026-11-18"
     },
     {
@@ -3014,15 +3028,15 @@
     {
       "name": "Gemma 4 26B A4B (Reasoning)",
       "slug": "gemma-4-26b-a4b",
-      "intelligence_index": null,
-      "cost_per_task": null,
+      "intelligence_index": 4,
+      "cost_per_task": 0.1927,
       "pricing": {
         "price_1m_input_tokens": 0.095,
         "price_1m_output_tokens": 0.32,
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 88.54,
+      "median_output_tokens_per_second": 95.1,
       "release_date": "2026-04-02"
     },
     {
@@ -3036,7 +3050,7 @@
         "price_1m_cache_hit_tokens": 0.07,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 111.36,
+      "median_output_tokens_per_second": 106.53,
       "release_date": "2026-04-02"
     },
     {
@@ -3050,7 +3064,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 35.52,
+      "median_output_tokens_per_second": 35.42,
       "release_date": "2026-04-02"
     },
     {
@@ -3064,7 +3078,7 @@
         "price_1m_cache_hit_tokens": 0.14,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 63.44,
+      "median_output_tokens_per_second": 67.13,
       "release_date": "2026-04-02"
     },
     {
@@ -3134,7 +3148,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 79.85,
+      "median_output_tokens_per_second": 74.53,
       "release_date": "2025-07-28"
     },
     {
@@ -3148,7 +3162,7 @@
         "price_1m_cache_hit_tokens": 0.11,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 37.15,
+      "median_output_tokens_per_second": 34.93,
       "release_date": "2025-08-11"
     },
     {
@@ -3162,7 +3176,7 @@
         "price_1m_cache_hit_tokens": 0.11,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 43.42,
+      "median_output_tokens_per_second": 42.57,
       "release_date": "2025-08-11"
     },
     {
@@ -3176,7 +3190,7 @@
         "price_1m_cache_hit_tokens": 0.355,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 61.6,
+      "median_output_tokens_per_second": 56.5,
       "release_date": "2025-09-30"
     },
     {
@@ -3190,7 +3204,7 @@
         "price_1m_cache_hit_tokens": 0.11,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 60.13,
+      "median_output_tokens_per_second": 60.03,
       "release_date": "2025-09-30"
     },
     {
@@ -3204,7 +3218,7 @@
         "price_1m_cache_hit_tokens": 0.1775,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 77.42,
+      "median_output_tokens_per_second": 80.72,
       "release_date": "2025-12-08"
     },
     {
@@ -3218,7 +3232,7 @@
         "price_1m_cache_hit_tokens": 0.1775,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 84.11,
+      "median_output_tokens_per_second": 86.39,
       "release_date": "2025-12-08"
     },
     {
@@ -3232,7 +3246,7 @@
         "price_1m_cache_hit_tokens": 0.28,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 82.15,
+      "median_output_tokens_per_second": 70.59,
       "release_date": "2025-12-22"
     },
     {
@@ -3246,7 +3260,7 @@
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 104.28,
+      "median_output_tokens_per_second": 105.04,
       "release_date": "2026-01-19"
     },
     {
@@ -3260,7 +3274,7 @@
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 94.07,
+      "median_output_tokens_per_second": 105.88,
       "release_date": "2026-01-19"
     },
     {
@@ -3274,7 +3288,7 @@
         "price_1m_cache_hit_tokens": 0.28,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 70.45,
+      "median_output_tokens_per_second": 74.11,
       "release_date": "2025-12-22"
     },
     {
@@ -3302,7 +3316,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 70.79,
+      "median_output_tokens_per_second": 71.09,
       "release_date": "2026-02-11"
     },
     {
@@ -3316,7 +3330,7 @@
         "price_1m_cache_hit_tokens": 0.26,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 77.37,
+      "median_output_tokens_per_second": 82.58,
       "release_date": "2026-04-07"
     },
     {
@@ -3330,7 +3344,7 @@
         "price_1m_cache_hit_tokens": 0.43,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 65.3,
+      "median_output_tokens_per_second": 83.33,
       "release_date": "2026-04-07"
     },
     {
@@ -3344,7 +3358,7 @@
         "price_1m_cache_hit_tokens": 0.26,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.68,
+      "median_output_tokens_per_second": 75.71,
       "release_date": "2026-06-16"
     },
     {
@@ -3358,7 +3372,7 @@
         "price_1m_cache_hit_tokens": 0.235,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 155.3,
+      "median_output_tokens_per_second": 169.99,
       "release_date": "2026-06-16"
     },
     {
@@ -3372,7 +3386,7 @@
         "price_1m_cache_hit_tokens": 0.26,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 88.35,
+      "median_output_tokens_per_second": 88.69,
       "release_date": "2026-08-18"
     },
     {
@@ -3386,7 +3400,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 63.79,
+      "median_output_tokens_per_second": 61.67,
       "release_date": "2026-08-26"
     },
     {
@@ -3400,7 +3414,7 @@
         "price_1m_cache_hit_tokens": 0.26,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 84.56,
+      "median_output_tokens_per_second": 89.5,
       "release_date": "2026-08-18"
     },
     {
@@ -3414,7 +3428,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 62,
+      "median_output_tokens_per_second": 64.74,
       "release_date": "2026-02-11"
     },
     {
@@ -3498,7 +3512,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 168.41,
+      "median_output_tokens_per_second": 180.99,
       "release_date": "2025-04-14"
     },
     {
@@ -3512,7 +3526,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 105.75,
+      "median_output_tokens_per_second": 110.8,
       "release_date": "2025-04-14"
     },
     {
@@ -3526,7 +3540,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 324.37,
+      "median_output_tokens_per_second": 329.26,
       "release_date": "2025-04-14"
     },
     {
@@ -3554,7 +3568,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 128.49,
+      "median_output_tokens_per_second": 132.8,
       "release_date": "2023-11-06"
     },
     {
@@ -3568,7 +3582,7 @@
         "price_1m_cache_hit_tokens": 1.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 201.09,
+      "median_output_tokens_per_second": 211.06,
       "release_date": "2024-11-20"
     },
     {
@@ -3582,7 +3596,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 132.62,
+      "median_output_tokens_per_second": 148.25,
       "release_date": "2024-05-13"
     },
     {
@@ -3596,7 +3610,7 @@
         "price_1m_cache_hit_tokens": 1.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 126.68,
+      "median_output_tokens_per_second": 146.7,
       "release_date": "2024-08-06"
     },
     {
@@ -3638,7 +3652,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.64,
+      "median_output_tokens_per_second": 70.76,
       "release_date": "2024-07-18"
     },
     {
@@ -3680,7 +3694,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 88.75,
+      "median_output_tokens_per_second": 95.86,
       "release_date": "2025-08-07"
     },
     {
@@ -3694,7 +3708,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 101.18,
+      "median_output_tokens_per_second": 117.98,
       "release_date": "2025-11-13"
     },
     {
@@ -3708,7 +3722,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 127.78,
+      "median_output_tokens_per_second": 128.62,
       "release_date": "2025-11-13"
     },
     {
@@ -3722,7 +3736,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 177.25,
+      "median_output_tokens_per_second": 177.78,
       "release_date": "2025-11-13"
     },
     {
@@ -3736,7 +3750,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 100.75,
+      "median_output_tokens_per_second": 109.77,
       "release_date": "2025-11-13"
     },
     {
@@ -3750,7 +3764,7 @@
         "price_1m_cache_hit_tokens": 0.175,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.47,
+      "median_output_tokens_per_second": 67.85,
       "release_date": "2025-12-11"
     },
     {
@@ -3764,7 +3778,7 @@
         "price_1m_cache_hit_tokens": 0.175,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 142.31,
+      "median_output_tokens_per_second": 143.72,
       "release_date": "2025-12-11"
     },
     {
@@ -3792,7 +3806,7 @@
         "price_1m_cache_hit_tokens": 0.175,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 62.15,
+      "median_output_tokens_per_second": 65.04,
       "release_date": "2025-12-11"
     },
     {
@@ -3806,7 +3820,7 @@
         "price_1m_cache_hit_tokens": 0.175,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 93.43,
+      "median_output_tokens_per_second": 102.61,
       "release_date": "2026-02-05"
     },
     {
@@ -3820,7 +3834,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 96.9,
+      "median_output_tokens_per_second": 108.32,
       "release_date": "2026-03-05"
     },
     {
@@ -3848,7 +3862,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 225.58,
+      "median_output_tokens_per_second": 231.07,
       "release_date": "2026-03-17"
     },
     {
@@ -3862,7 +3876,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 170.18,
+      "median_output_tokens_per_second": 181.01,
       "release_date": "2026-03-17"
     },
     {
@@ -3876,7 +3890,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 173.2,
+      "median_output_tokens_per_second": 186.08,
       "release_date": "2026-03-17"
     },
     {
@@ -3890,7 +3904,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 159.37,
+      "median_output_tokens_per_second": 163.69,
       "release_date": "2026-03-17"
     },
     {
@@ -3904,7 +3918,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 162.28,
+      "median_output_tokens_per_second": 169.22,
       "release_date": "2026-03-17"
     },
     {
@@ -3918,7 +3932,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 163.46,
+      "median_output_tokens_per_second": 161.66,
       "release_date": "2026-03-17"
     },
     {
@@ -3932,7 +3946,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 61.86,
+      "median_output_tokens_per_second": 67.69,
       "release_date": "2026-03-05"
     },
     {
@@ -3960,7 +3974,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 80.42,
+      "median_output_tokens_per_second": 86.57,
       "release_date": "2026-04-23"
     },
     {
@@ -3974,7 +3988,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 72.02,
+      "median_output_tokens_per_second": 84.08,
       "release_date": "2026-04-23"
     },
     {
@@ -4002,7 +4016,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 183.79,
+      "median_output_tokens_per_second": 200.68,
       "release_date": "2026-06-25"
     },
     {
@@ -4016,7 +4030,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 74.85,
+      "median_output_tokens_per_second": 79.81,
       "release_date": "2026-04-23"
     },
     {
@@ -4030,7 +4044,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 68.3,
+      "median_output_tokens_per_second": 83.26,
       "release_date": "2026-04-23"
     },
     {
@@ -4044,7 +4058,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.28,
+      "median_output_tokens_per_second": 79.21,
       "release_date": "2026-04-23"
     },
     {
@@ -4072,7 +4086,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 122.72,
+      "median_output_tokens_per_second": 126.7,
       "release_date": "2026-07-09"
     },
     {
@@ -4086,7 +4100,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 123.55,
+      "median_output_tokens_per_second": 124.57,
       "release_date": "2026-07-09"
     },
     {
@@ -4100,7 +4114,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 122.29,
+      "median_output_tokens_per_second": 124.42,
       "release_date": "2026-07-09"
     },
     {
@@ -4114,7 +4128,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 121.87,
+      "median_output_tokens_per_second": 122.94,
       "release_date": "2026-07-09"
     },
     {
@@ -4128,7 +4142,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 129.76,
+      "median_output_tokens_per_second": 125.19,
       "release_date": "2026-07-09"
     },
     {
@@ -4142,7 +4156,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": 0.25
       },
-      "median_output_tokens_per_second": 124.58,
+      "median_output_tokens_per_second": 122.05,
       "release_date": "2026-07-09"
     },
     {
@@ -4156,7 +4170,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 137.45,
+      "median_output_tokens_per_second": 142.99,
       "release_date": "2026-07-09"
     },
     {
@@ -4170,7 +4184,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 129.26,
+      "median_output_tokens_per_second": 136.22,
       "release_date": "2026-07-09"
     },
     {
@@ -4184,7 +4198,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 119.63,
+      "median_output_tokens_per_second": 132.48,
       "release_date": "2026-07-09"
     },
     {
@@ -4198,7 +4212,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 130.77,
+      "median_output_tokens_per_second": 133.08,
       "release_date": "2026-07-09"
     },
     {
@@ -4212,7 +4226,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 117.72,
+      "median_output_tokens_per_second": 139.45,
       "release_date": "2026-07-09"
     },
     {
@@ -4226,7 +4240,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 5
       },
-      "median_output_tokens_per_second": 135.51,
+      "median_output_tokens_per_second": 134.17,
       "release_date": "2026-07-09"
     },
     {
@@ -4240,7 +4254,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 97.28,
+      "median_output_tokens_per_second": 108.6,
       "release_date": "2026-07-09"
     },
     {
@@ -4254,7 +4268,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 100.93,
+      "median_output_tokens_per_second": 106.54,
       "release_date": "2026-07-09"
     },
     {
@@ -4268,7 +4282,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 95.38,
+      "median_output_tokens_per_second": 102.49,
       "release_date": "2026-07-09"
     },
     {
@@ -4282,7 +4296,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 93.1,
+      "median_output_tokens_per_second": 103.86,
       "release_date": "2026-07-09"
     },
     {
@@ -4296,7 +4310,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 89.63,
+      "median_output_tokens_per_second": 100.64,
       "release_date": "2026-07-09"
     },
     {
@@ -4310,7 +4324,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 96.08,
+      "median_output_tokens_per_second": 104.43,
       "release_date": "2026-07-09"
     },
     {
@@ -4338,7 +4352,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 193.98,
+      "median_output_tokens_per_second": 209.12,
       "release_date": "2025-09-23"
     },
     {
@@ -4352,7 +4366,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 76.73,
+      "median_output_tokens_per_second": 97.58,
       "release_date": "2025-08-07"
     },
     {
@@ -4366,7 +4380,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 103.72,
+      "median_output_tokens_per_second": 103.16,
       "release_date": "2025-08-07"
     },
     {
@@ -4380,7 +4394,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 94.53,
+      "median_output_tokens_per_second": 98.38,
       "release_date": "2025-08-07"
     },
     {
@@ -4394,7 +4408,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 94.64,
+      "median_output_tokens_per_second": 96.14,
       "release_date": "2025-08-07"
     },
     {
@@ -4408,7 +4422,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 91.17,
+      "median_output_tokens_per_second": 92.91,
       "release_date": "2025-08-07"
     },
     {
@@ -4436,7 +4450,7 @@
         "price_1m_cache_hit_tokens": 0.005,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 197.83,
+      "median_output_tokens_per_second": 211,
       "release_date": "2025-08-07"
     },
     {
@@ -4450,7 +4464,7 @@
         "price_1m_cache_hit_tokens": 0.005,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 187.41,
+      "median_output_tokens_per_second": 215.71,
       "release_date": "2025-08-07"
     },
     {
@@ -4464,7 +4478,7 @@
         "price_1m_cache_hit_tokens": 0.005,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 207.16,
+      "median_output_tokens_per_second": 215.6,
       "release_date": "2025-08-07"
     },
     {
@@ -4478,7 +4492,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 79.7,
+      "median_output_tokens_per_second": 82.39,
       "release_date": "2026-09-29"
     },
     {
@@ -4492,7 +4506,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 63.29,
+      "median_output_tokens_per_second": 65.33,
       "release_date": "2026-09-29"
     },
     {
@@ -4506,7 +4520,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 56.33,
+      "median_output_tokens_per_second": 59.34,
       "release_date": "2026-09-29"
     },
     {
@@ -4520,7 +4534,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 52.4,
+      "median_output_tokens_per_second": 55.76,
       "release_date": "2026-09-29"
     },
     {
@@ -4534,7 +4548,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 73.61,
+      "median_output_tokens_per_second": 78.12,
       "release_date": "2026-09-29"
     },
     {
@@ -4548,7 +4562,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 75.18,
+      "median_output_tokens_per_second": 77.09,
       "release_date": "2026-10-26"
     },
     {
@@ -4576,7 +4590,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 68.21,
+      "median_output_tokens_per_second": 64.99,
       "release_date": "2026-10-26"
     },
     {
@@ -4590,7 +4604,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 66.48,
+      "median_output_tokens_per_second": 66.08,
       "release_date": "2026-10-26"
     },
     {
@@ -4604,7 +4618,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 65.14,
+      "median_output_tokens_per_second": 63.5,
       "release_date": "2026-10-26"
     },
     {
@@ -4618,7 +4632,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": 1.25
       },
-      "median_output_tokens_per_second": 71.8,
+      "median_output_tokens_per_second": 70.37,
       "release_date": "2026-10-26"
     },
     {
@@ -4632,7 +4646,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 63.31,
+      "median_output_tokens_per_second": 57.93,
       "release_date": "2026-11-17"
     },
     {
@@ -4646,7 +4660,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 42.5,
+      "median_output_tokens_per_second": 44.42,
       "release_date": "2026-11-17"
     },
     {
@@ -4660,7 +4674,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 39.58,
+      "median_output_tokens_per_second": 38.72,
       "release_date": "2026-11-17"
     },
     {
@@ -4674,7 +4688,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 40.9,
+      "median_output_tokens_per_second": 41.6,
       "release_date": "2026-11-17"
     },
     {
@@ -4688,7 +4702,7 @@
         "price_1m_cache_hit_tokens": 0.4,
         "price_1m_cache_write_tokens": 10
       },
-      "median_output_tokens_per_second": 41.46,
+      "median_output_tokens_per_second": 44.89,
       "release_date": "2026-11-17"
     },
     {
@@ -4702,7 +4716,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 68.04,
+      "median_output_tokens_per_second": 73.7,
       "release_date": "2026-11-17"
     },
     {
@@ -4716,7 +4730,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 54.47,
+      "median_output_tokens_per_second": 57.67,
       "release_date": "2026-11-17"
     },
     {
@@ -4730,7 +4744,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 53.38,
+      "median_output_tokens_per_second": 60.13,
       "release_date": "2026-11-17"
     },
     {
@@ -4744,7 +4758,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 53.35,
+      "median_output_tokens_per_second": 59.6,
       "release_date": "2026-11-17"
     },
     {
@@ -4758,7 +4772,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 63.57,
+      "median_output_tokens_per_second": 70.66,
       "release_date": "2026-11-17"
     },
     {
@@ -4772,7 +4786,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 64.17,
+      "median_output_tokens_per_second": 65.45,
       "release_date": "2026-09-03"
     },
     {
@@ -4786,7 +4800,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 48.89,
+      "median_output_tokens_per_second": 62.7,
       "release_date": "2026-09-03"
     },
     {
@@ -4800,7 +4814,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 43.53,
+      "median_output_tokens_per_second": 52.83,
       "release_date": "2026-09-03"
     },
     {
@@ -4814,7 +4828,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 47.16,
+      "median_output_tokens_per_second": 52.59,
       "release_date": "2026-09-03"
     },
     {
@@ -4828,7 +4842,7 @@
         "price_1m_cache_hit_tokens": 1,
         "price_1m_cache_write_tokens": 12.5
       },
-      "median_output_tokens_per_second": 55.01,
+      "median_output_tokens_per_second": 58.91,
       "release_date": "2026-09-03"
     },
     {
@@ -4842,7 +4856,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 145.45,
+      "median_output_tokens_per_second": 156.42,
       "release_date": "2026-09-22"
     },
     {
@@ -4856,7 +4870,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 139.33,
+      "median_output_tokens_per_second": 159.56,
       "release_date": "2026-09-22"
     },
     {
@@ -4870,7 +4884,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 146.54,
+      "median_output_tokens_per_second": 148.63,
       "release_date": "2026-09-22"
     },
     {
@@ -4884,7 +4898,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 145.36,
+      "median_output_tokens_per_second": 147.83,
       "release_date": "2026-09-22"
     },
     {
@@ -4898,7 +4912,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 145.32,
+      "median_output_tokens_per_second": 147.9,
       "release_date": "2026-09-22"
     },
     {
@@ -4912,7 +4926,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": 0.125
       },
-      "median_output_tokens_per_second": 139.94,
+      "median_output_tokens_per_second": 156.42,
       "release_date": "2026-09-22"
     },
     {
@@ -4926,7 +4940,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 145.37,
+      "median_output_tokens_per_second": 170.65,
       "release_date": "2026-09-22"
     },
     {
@@ -4954,7 +4968,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 143.34,
+      "median_output_tokens_per_second": 155.56,
       "release_date": "2026-09-22"
     },
     {
@@ -4968,7 +4982,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 143.5,
+      "median_output_tokens_per_second": 148.14,
       "release_date": "2026-09-22"
     },
     {
@@ -4996,7 +5010,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 138.07,
+      "median_output_tokens_per_second": 146.46,
       "release_date": "2026-09-22"
     },
     {
@@ -5010,7 +5024,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": 2.5
       },
-      "median_output_tokens_per_second": 133.56,
+      "median_output_tokens_per_second": 158.34,
       "release_date": "2026-09-22"
     },
     {
@@ -5024,7 +5038,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 241.56,
+      "median_output_tokens_per_second": 242.25,
       "release_date": "2025-08-05"
     },
     {
@@ -5038,7 +5052,7 @@
         "price_1m_cache_hit_tokens": 0.125,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 256.22,
+      "median_output_tokens_per_second": 256.3,
       "release_date": "2025-08-05"
     },
     {
@@ -5052,7 +5066,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 124.49,
+      "median_output_tokens_per_second": 126.71,
       "release_date": "2025-08-05"
     },
     {
@@ -5066,7 +5080,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 154.1,
+      "median_output_tokens_per_second": 178.72,
       "release_date": "2025-08-05"
     },
     {
@@ -5248,7 +5262,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 88.03,
+      "median_output_tokens_per_second": 86.74,
       "release_date": "2026-08-25"
     },
     {
@@ -5332,7 +5346,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 80.23,
+      "median_output_tokens_per_second": 84.81,
       "release_date": "2025-07-10"
     },
     {
@@ -5374,7 +5388,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 134.22,
+      "median_output_tokens_per_second": 143.91,
       "release_date": "2026-04-07"
     },
     {
@@ -5416,7 +5430,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 127.13,
+      "median_output_tokens_per_second": 132.22,
       "release_date": "2026-04-07"
     },
     {
@@ -5430,7 +5444,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 101.77,
+      "median_output_tokens_per_second": 96.7,
       "release_date": "2026-04-30"
     },
     {
@@ -5458,7 +5472,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 101.74,
+      "median_output_tokens_per_second": 103.91,
       "release_date": "2026-04-30"
     },
     {
@@ -5472,7 +5486,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 89.01,
+      "median_output_tokens_per_second": 89.6,
       "release_date": "2026-04-30"
     },
     {
@@ -5486,7 +5500,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 68.35,
+      "median_output_tokens_per_second": 72.69,
       "release_date": "2026-07-08"
     },
     {
@@ -5500,7 +5514,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 79.06,
+      "median_output_tokens_per_second": 86.04,
       "release_date": "2026-08-12"
     },
     {
@@ -5514,7 +5528,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.8,
+      "median_output_tokens_per_second": 78.92,
       "release_date": "2026-08-12"
     },
     {
@@ -5528,7 +5542,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 81.43,
+      "median_output_tokens_per_second": 85.63,
       "release_date": "2026-08-12"
     },
     {
@@ -5542,7 +5556,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 69.17,
+      "median_output_tokens_per_second": 76.89,
       "release_date": "2026-08-12"
     },
     {
@@ -5556,7 +5570,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 89.77,
+      "median_output_tokens_per_second": 95.78,
       "release_date": "2026-09-21"
     },
     {
@@ -5570,7 +5584,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 85.68,
+      "median_output_tokens_per_second": 85.9,
       "release_date": "2026-09-21"
     },
     {
@@ -5584,7 +5598,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 68.82,
+      "median_output_tokens_per_second": 76.42,
       "release_date": "2026-09-21"
     },
     {
@@ -5696,7 +5710,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 43.63,
+      "median_output_tokens_per_second": 43.24,
       "release_date": "2025-08-27"
     },
     {
@@ -5738,7 +5752,7 @@
         "price_1m_cache_hit_tokens": 0.035,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 56.34,
+      "median_output_tokens_per_second": 64.28,
       "release_date": "2026-07-06"
     },
     {
@@ -5808,7 +5822,7 @@
         "price_1m_cache_hit_tokens": 0.17,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 165.33,
+      "median_output_tokens_per_second": 163.2,
       "release_date": "2026-07-15"
     },
     {
@@ -5822,7 +5836,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 142.3,
+      "median_output_tokens_per_second": 146.13,
       "release_date": "2026-11-20"
     },
     {
@@ -5836,7 +5850,7 @@
         "price_1m_cache_hit_tokens": 0.03,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 90.96,
+      "median_output_tokens_per_second": 92.16,
       "release_date": "2026-11-05"
     },
     {
@@ -5850,7 +5864,7 @@
         "price_1m_cache_hit_tokens": 0.17,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 161.29,
+      "median_output_tokens_per_second": 155.67,
       "release_date": "2026-07-15"
     },
     {
@@ -5864,7 +5878,7 @@
         "price_1m_cache_hit_tokens": 0.06,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 138.87,
+      "median_output_tokens_per_second": 149.9,
       "release_date": "2026-07-30"
     },
     {
@@ -5878,7 +5892,7 @@
         "price_1m_cache_hit_tokens": 0.06,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 128.04,
+      "median_output_tokens_per_second": 141.97,
       "release_date": "2026-07-30"
     },
     {
@@ -6172,7 +6186,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 1010.48,
+      "median_output_tokens_per_second": 1008.65,
       "release_date": "2026-09-03"
     },
     {
@@ -6298,7 +6312,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 49.59,
+      "median_output_tokens_per_second": 55,
       "release_date": "2025-07-11"
     },
     {
@@ -6312,7 +6326,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 47.81,
+      "median_output_tokens_per_second": 54.54,
       "release_date": "2025-09-05"
     },
     {
@@ -6326,7 +6340,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 51.83,
+      "median_output_tokens_per_second": 54.57,
       "release_date": "2026-01-27"
     },
     {
@@ -6340,7 +6354,7 @@
         "price_1m_cache_hit_tokens": 0.6,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 54.99,
+      "median_output_tokens_per_second": 58.11,
       "release_date": "2026-01-27"
     },
     {
@@ -6354,7 +6368,7 @@
         "price_1m_cache_hit_tokens": 0.16,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 40.25,
+      "median_output_tokens_per_second": 41.2,
       "release_date": "2026-04-20"
     },
     {
@@ -6368,7 +6382,7 @@
         "price_1m_cache_hit_tokens": 0.16,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 38.66,
+      "median_output_tokens_per_second": 38.73,
       "release_date": "2026-04-20"
     },
     {
@@ -6382,7 +6396,7 @@
         "price_1m_cache_hit_tokens": 0.19,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 67.08,
+      "median_output_tokens_per_second": 78.98,
       "release_date": "2026-06-12"
     },
     {
@@ -6396,7 +6410,7 @@
         "price_1m_cache_hit_tokens": 0.6,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 120.41,
+      "median_output_tokens_per_second": 123.35,
       "release_date": "2025-11-06"
     },
     {
@@ -6410,7 +6424,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 44.27,
+      "median_output_tokens_per_second": 47.2,
       "release_date": "2026-07-16"
     },
     {
@@ -6438,7 +6452,7 @@
         "price_1m_cache_hit_tokens": 0.3,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 43.71,
+      "median_output_tokens_per_second": 46.21,
       "release_date": "2026-07-16"
     },
     {
@@ -6606,7 +6620,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 429.97,
+      "median_output_tokens_per_second": 422.08,
       "release_date": "2026-10-27"
     },
     {
@@ -6620,7 +6634,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 434.41,
+      "median_output_tokens_per_second": 435.23,
       "release_date": "2026-10-27"
     },
     {
@@ -6676,7 +6690,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 179.94,
+      "median_output_tokens_per_second": 189.1,
       "release_date": "2026-08-04"
     },
     {
@@ -6718,7 +6732,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 183.98,
+      "median_output_tokens_per_second": 192.71,
       "release_date": "2026-08-06"
     },
     {
@@ -6746,7 +6760,7 @@
         "price_1m_cache_hit_tokens": 0.06,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 60.83,
+      "median_output_tokens_per_second": 62.32,
       "release_date": "2026-10-01"
     },
     {
@@ -6774,7 +6788,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 6.61,
+      "median_output_tokens_per_second": 7.61,
       "release_date": "2025-09-17"
     },
     {
@@ -6886,7 +6900,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 142.94,
+      "median_output_tokens_per_second": 143.08,
       "release_date": "2024-07-23"
     },
     {
@@ -6998,7 +7012,7 @@
         "price_1m_cache_hit_tokens": 0.65,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 91.57,
+      "median_output_tokens_per_second": 91.92,
       "release_date": "2024-12-06"
     },
     {
@@ -7068,7 +7082,7 @@
         "price_1m_cache_hit_tokens": 0.24,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 188.9,
+      "median_output_tokens_per_second": 179.07,
       "release_date": "2025-04-05"
     },
     {
@@ -7082,7 +7096,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 126.63,
+      "median_output_tokens_per_second": 129.94,
       "release_date": "2025-04-05"
     },
     {
@@ -7138,7 +7152,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.49,
+      "median_output_tokens_per_second": 56.6,
       "release_date": "2026-06-29"
     },
     {
@@ -7208,7 +7222,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 78.32,
+      "median_output_tokens_per_second": 107.32,
       "release_date": "2025-09-17"
     },
     {
@@ -7222,7 +7236,7 @@
         "price_1m_cache_hit_tokens": 0.025,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 469.75,
+      "median_output_tokens_per_second": 564.25,
       "release_date": "2026-02-20"
     },
     {
@@ -7236,7 +7250,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 721.49,
+      "median_output_tokens_per_second": 680.43,
       "release_date": "2026-09-08"
     },
     {
@@ -7348,7 +7362,7 @@
         "price_1m_cache_hit_tokens": 0.0036,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 36.7,
+      "median_output_tokens_per_second": 45.01,
       "release_date": "2026-09-21"
     },
     {
@@ -7502,7 +7516,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.68,
+      "median_output_tokens_per_second": 61.86,
       "release_date": "2025-06-17"
     },
     {
@@ -7516,7 +7530,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 120.71,
+      "median_output_tokens_per_second": 119.88,
       "release_date": "2025-10-26"
     },
     {
@@ -7544,7 +7558,7 @@
         "price_1m_cache_hit_tokens": 0.045,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 62.82,
+      "median_output_tokens_per_second": 61.48,
       "release_date": "2026-02-12"
     },
     {
@@ -7558,7 +7572,7 @@
         "price_1m_cache_hit_tokens": 0.06,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 56.38,
+      "median_output_tokens_per_second": 60.42,
       "release_date": "2026-03-18"
     },
     {
@@ -7572,7 +7586,7 @@
         "price_1m_cache_hit_tokens": 0.06,
         "price_1m_cache_write_tokens": 0.375
       },
-      "median_output_tokens_per_second": 96.88,
+      "median_output_tokens_per_second": 98.34,
       "release_date": "2026-06-01"
     },
     {
@@ -7586,7 +7600,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 121.04,
+      "median_output_tokens_per_second": 133.21,
       "release_date": "2026-10-19"
     },
     {
@@ -7600,7 +7614,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 121.93,
+      "median_output_tokens_per_second": 124.93,
       "release_date": "2025-12-02"
     },
     {
@@ -7614,7 +7628,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 265.35,
+      "median_output_tokens_per_second": 267.27,
       "release_date": "2025-12-02"
     },
     {
@@ -7628,7 +7642,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 112.07,
+      "median_output_tokens_per_second": 112.06,
       "release_date": "2025-12-02"
     },
     {
@@ -7712,7 +7726,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 86.36,
+      "median_output_tokens_per_second": 86.71,
       "release_date": "2025-12-02"
     },
     {
@@ -7726,7 +7740,7 @@
         "price_1m_cache_hit_tokens": 0.07,
         "price_1m_cache_write_tokens": 0.7
       },
-      "median_output_tokens_per_second": 95.95,
+      "median_output_tokens_per_second": 97.61,
       "release_date": "2026-10-29"
     },
     {
@@ -7740,7 +7754,7 @@
         "price_1m_cache_hit_tokens": 0.07,
         "price_1m_cache_write_tokens": 0.7
       },
-      "median_output_tokens_per_second": 93.43,
+      "median_output_tokens_per_second": 102.15,
       "release_date": "2026-10-29"
     },
     {
@@ -7754,7 +7768,7 @@
         "price_1m_cache_hit_tokens": 0.07,
         "price_1m_cache_write_tokens": 1.36
       },
-      "median_output_tokens_per_second": 92.63,
+      "median_output_tokens_per_second": 108.5,
       "release_date": "2026-10-06"
     },
     {
@@ -7782,7 +7796,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 46.91,
+      "median_output_tokens_per_second": 46.68,
       "release_date": "2025-05-07"
     },
     {
@@ -7810,7 +7824,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 172.64,
+      "median_output_tokens_per_second": 176.74,
       "release_date": "2026-04-29"
     },
     {
@@ -7866,7 +7880,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 70.77,
+      "median_output_tokens_per_second": 73.3,
       "release_date": "2025-01-30"
     },
     {
@@ -7894,7 +7908,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 37.33,
+      "median_output_tokens_per_second": 35.6,
       "release_date": "2025-06-20"
     },
     {
@@ -7908,7 +7922,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 166.62,
+      "median_output_tokens_per_second": 165.71,
       "release_date": "2026-03-16"
     },
     {
@@ -7922,7 +7936,7 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 161.03,
+      "median_output_tokens_per_second": 165.42,
       "release_date": "2026-03-16"
     },
     {
@@ -7936,7 +7950,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 24.64,
+      "median_output_tokens_per_second": 24.21,
       "release_date": "2023-12-11"
     },
     {
@@ -8020,7 +8034,7 @@
         "price_1m_cache_hit_tokens": 0.004,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 598.76,
+      "median_output_tokens_per_second": 594.44,
       "release_date": "2026-11-09"
     },
     {
@@ -8034,21 +8048,21 @@
         "price_1m_cache_hit_tokens": 0.004,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 597.38,
+      "median_output_tokens_per_second": 600.36,
       "release_date": "2026-11-09"
     },
     {
       "name": "Muse Glimmer (High)",
       "slug": "muse-glimmer",
       "intelligence_index": 6.3,
-      "cost_per_task": 0.2061,
+      "cost_per_task": 0.1494,
       "pricing": {
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2,
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 103.54,
+      "median_output_tokens_per_second": 100.29,
       "release_date": "2026-08-10"
     },
     {
@@ -8076,7 +8090,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 274.24,
+      "median_output_tokens_per_second": 316.97,
       "release_date": "2026-07-09"
     },
     {
@@ -8090,7 +8104,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 288.27,
+      "median_output_tokens_per_second": 316.97,
       "release_date": "2026-08-05"
     },
     {
@@ -8104,7 +8118,7 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 117.93,
+      "median_output_tokens_per_second": 116.43,
       "release_date": "2026-09-02"
     },
     {
@@ -8118,21 +8132,21 @@
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 346.43,
+      "median_output_tokens_per_second": 347.05,
       "release_date": "2026-09-02"
     },
     {
       "name": "Muse Spark Open (Xhigh)",
       "slug": "muse-spark-open",
       "intelligence_index": 24.9,
-      "cost_per_task": 2.0177,
+      "cost_per_task": 1.7657,
       "pricing": {
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 4.25,
         "price_1m_cache_hit_tokens": 0.15,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 198.84,
+      "median_output_tokens_per_second": 212.06,
       "release_date": "2026-10-15"
     },
     {
@@ -8146,7 +8160,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 97.25,
+      "median_output_tokens_per_second": 100.49,
       "release_date": "2026-10-12"
     },
     {
@@ -8174,7 +8188,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 93.63,
+      "median_output_tokens_per_second": 88.68,
       "release_date": "2026-10-12"
     },
     {
@@ -8237,28 +8251,28 @@
       "name": "Nemotron 3.5 Lightning",
       "slug": "nemotron-3-5-lightning",
       "intelligence_index": 5.5,
-      "cost_per_task": 0.2898,
+      "cost_per_task": 0.2377,
       "pricing": {
         "price_1m_input_tokens": 0.06,
         "price_1m_output_tokens": 0.2,
         "price_1m_cache_hit_tokens": 0.035,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 350.25,
+      "median_output_tokens_per_second": 363.66,
       "release_date": "2026-08-11"
     },
     {
       "name": "Nemotron 3.5 Super VL",
       "slug": "nemotron-3-5-super-vl",
       "intelligence_index": 13.6,
-      "cost_per_task": 0.4818,
+      "cost_per_task": 0.5453,
       "pricing": {
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.5,
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 411.12,
+      "median_output_tokens_per_second": 443.69,
       "release_date": "2026-10-15"
     },
     {
@@ -8314,7 +8328,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 331.11,
+      "median_output_tokens_per_second": 330.23,
       "release_date": "2026-06-09"
     },
     {
@@ -8328,7 +8342,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 134.31,
+      "median_output_tokens_per_second": 149.8,
       "release_date": "2025-10-29"
     },
     {
@@ -8342,7 +8356,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 156.07,
+      "median_output_tokens_per_second": 156.84,
       "release_date": "2025-10-29"
     },
     {
@@ -8356,7 +8370,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 132.68,
+      "median_output_tokens_per_second": 145.61,
       "release_date": "2025-10-29"
     },
     {
@@ -8370,7 +8384,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 164.82,
+      "median_output_tokens_per_second": 166.52,
       "release_date": "2025-10-29"
     },
     {
@@ -8426,7 +8440,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 124.31,
+      "median_output_tokens_per_second": 129.9,
       "release_date": "2025-11-27"
     },
     {
@@ -8440,7 +8454,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 124.78,
+      "median_output_tokens_per_second": 127.34,
       "release_date": "2025-11-27"
     },
     {
@@ -8454,7 +8468,7 @@
         "price_1m_cache_hit_tokens": 0.312,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 127.78,
+      "median_output_tokens_per_second": 132.3,
       "release_date": "2025-11-27"
     },
     {
@@ -8482,7 +8496,7 @@
         "price_1m_cache_hit_tokens": 0.0088,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 287.72,
+      "median_output_tokens_per_second": 295.79,
       "release_date": "2024-12-03"
     },
     {
@@ -8510,7 +8524,7 @@
         "price_1m_cache_hit_tokens": 0.2,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 122.12,
+      "median_output_tokens_per_second": 125.35,
       "release_date": "2024-12-03"
     },
     {
@@ -8524,7 +8538,7 @@
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 280.43,
+      "median_output_tokens_per_second": 273.53,
       "release_date": "2025-12-15"
     },
     {
@@ -8538,7 +8552,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 221.06,
+      "median_output_tokens_per_second": 191.23,
       "release_date": "2025-12-15"
     },
     {
@@ -8566,21 +8580,21 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 213.88,
+      "median_output_tokens_per_second": 197.65,
       "release_date": "2026-03-11"
     },
     {
       "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
       "slug": "nvidia-nemotron-3-ultra-550b-a55b",
       "intelligence_index": 11.8,
-      "cost_per_task": 2.1897,
+      "cost_per_task": 2.5044,
       "pricing": {
         "price_1m_input_tokens": 0.55,
         "price_1m_output_tokens": 2.3,
         "price_1m_cache_hit_tokens": 0.11,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 275.76,
+      "median_output_tokens_per_second": 282.09,
       "release_date": "2026-06-04"
     },
     {
@@ -8594,7 +8608,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 204.32,
+      "median_output_tokens_per_second": 205.99,
       "release_date": "2025-10-28"
     },
     {
@@ -8622,7 +8636,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 170.71,
+      "median_output_tokens_per_second": 168.46,
       "release_date": "2025-08-18"
     },
     {
@@ -8636,7 +8650,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 171.18,
+      "median_output_tokens_per_second": 168.25,
       "release_date": "2025-08-18"
     },
     {
@@ -8706,7 +8720,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 146.43,
+      "median_output_tokens_per_second": 156.14,
       "release_date": "2025-04-16"
     },
     {
@@ -8916,7 +8930,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 42,
+      "median_output_tokens_per_second": 42.55,
       "release_date": "2024-12-12"
     },
     {
@@ -8930,7 +8944,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 42.21,
+      "median_output_tokens_per_second": 40.12,
       "release_date": "2025-02-26"
     },
     {
@@ -8960,6 +8974,20 @@
       },
       "median_output_tokens_per_second": null,
       "release_date": "2024-11-18"
+    },
+    {
+      "name": "Quasar 1.2 358B (Max, Based on GLM-5.3)",
+      "slug": "quasar-1-2-358b",
+      "intelligence_index": 23.1,
+      "cost_per_task": 0.131,
+      "pricing": {
+        "price_1m_input_tokens": 0.11,
+        "price_1m_output_tokens": 0.33,
+        "price_1m_cache_hit_tokens": 0.006,
+        "price_1m_cache_write_tokens": null
+      },
+      "median_output_tokens_per_second": 138.17,
+      "release_date": "2026-10-07"
     },
     {
       "name": "Quasar 438B (Max, Based on GLM-5.2)",
@@ -9056,7 +9084,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 32.04,
+      "median_output_tokens_per_second": 31.3,
       "release_date": "2024-09-19"
     },
     {
@@ -9182,7 +9210,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 59.06,
+      "median_output_tokens_per_second": 57.76,
       "release_date": "2025-04-28"
     },
     {
@@ -9196,7 +9224,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 55.55,
+      "median_output_tokens_per_second": 60.61,
       "release_date": "2025-04-28"
     },
     {
@@ -9224,7 +9252,7 @@
         "price_1m_cache_hit_tokens": 0.22,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 67.9,
+      "median_output_tokens_per_second": 65.13,
       "release_date": "2025-07-21"
     },
     {
@@ -9266,7 +9294,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 56.32,
+      "median_output_tokens_per_second": 60.69,
       "release_date": "2025-07-29"
     },
     {
@@ -9294,7 +9322,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 81.02,
+      "median_output_tokens_per_second": 100.2,
       "release_date": "2025-04-28"
     },
     {
@@ -9308,7 +9336,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 68.45,
+      "median_output_tokens_per_second": 93.28,
       "release_date": "2025-04-28"
     },
     {
@@ -9322,7 +9350,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 63.54,
+      "median_output_tokens_per_second": 64.1,
       "release_date": "2025-04-28"
     },
     {
@@ -9336,7 +9364,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 22.63,
+      "median_output_tokens_per_second": 25.42,
       "release_date": "2025-04-28"
     },
     {
@@ -9434,7 +9462,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 130.5,
+      "median_output_tokens_per_second": 132.9,
       "release_date": "2026-02-24"
     },
     {
@@ -9448,7 +9476,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 142.94,
+      "median_output_tokens_per_second": 146.43,
       "release_date": "2026-02-24"
     },
     {
@@ -9462,7 +9490,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 23.4,
+      "median_output_tokens_per_second": 23.2,
       "release_date": "2026-02-24"
     },
     {
@@ -9476,7 +9504,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 21.99,
+      "median_output_tokens_per_second": 23.09,
       "release_date": "2026-02-24"
     },
     {
@@ -9518,7 +9546,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 151.99,
+      "median_output_tokens_per_second": 153.75,
       "release_date": "2026-02-24"
     },
     {
@@ -9532,7 +9560,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 168.34,
+      "median_output_tokens_per_second": 168.87,
       "release_date": "2026-02-24"
     },
     {
@@ -9546,7 +9574,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.94,
+      "median_output_tokens_per_second": 57.81,
       "release_date": "2026-02-16"
     },
     {
@@ -9560,7 +9588,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.96,
+      "median_output_tokens_per_second": 57.99,
       "release_date": "2026-02-16"
     },
     {
@@ -9602,7 +9630,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 59.52,
+      "median_output_tokens_per_second": 51.9,
       "release_date": "2026-03-02"
     },
     {
@@ -9616,7 +9644,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 126.12,
+      "median_output_tokens_per_second": 137.12,
       "release_date": "2026-03-02"
     },
     {
@@ -9630,7 +9658,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 238,
+      "median_output_tokens_per_second": 234.22,
       "release_date": "2026-03-30"
     },
     {
@@ -9644,7 +9672,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 76.38,
+      "median_output_tokens_per_second": 74.97,
       "release_date": "2026-03-30"
     },
     {
@@ -9658,7 +9686,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.9,
+      "median_output_tokens_per_second": 60.24,
       "release_date": "2026-04-22"
     },
     {
@@ -9672,7 +9700,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 57.3,
+      "median_output_tokens_per_second": 60.41,
       "release_date": "2026-04-22"
     },
     {
@@ -9686,7 +9714,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 95.97,
+      "median_output_tokens_per_second": 99.42,
       "release_date": "2026-04-16"
     },
     {
@@ -9700,7 +9728,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 102.25,
+      "median_output_tokens_per_second": 102.66,
       "release_date": "2026-04-16"
     },
     {
@@ -9728,7 +9756,7 @@
         "price_1m_cache_hit_tokens": 0.05,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 55.34,
+      "median_output_tokens_per_second": 54.99,
       "release_date": "2026-04-02"
     },
     {
@@ -9742,7 +9770,7 @@
         "price_1m_cache_hit_tokens": 0.5,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 192.95,
+      "median_output_tokens_per_second": 197.76,
       "release_date": "2026-05-19"
     },
     {
@@ -9756,7 +9784,7 @@
         "price_1m_cache_hit_tokens": 0.08,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 58.36,
+      "median_output_tokens_per_second": 57.21,
       "release_date": "2026-06-01"
     },
     {
@@ -9770,7 +9798,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 39.69,
+      "median_output_tokens_per_second": 41.28,
       "release_date": "2026-08-12"
     },
     {
@@ -9784,7 +9812,7 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 55.69,
+      "median_output_tokens_per_second": 54,
       "release_date": "2026-08-14"
     },
     {
@@ -9798,28 +9826,28 @@
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 63.89,
+      "median_output_tokens_per_second": 62.15,
       "release_date": "2026-08-14"
     },
     {
       "name": "Qwen3.8 27B (Medium)",
       "slug": "qwen3-8-27b-medium",
       "intelligence_index": 17.5,
-      "cost_per_task": 2.2709,
+      "cost_per_task": 2.5081,
       "pricing": {
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3,
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 58.72,
+      "median_output_tokens_per_second": 57.39,
       "release_date": "2026-08-14"
     },
     {
       "name": "Qwen3.8 27B (Non-reasoning)",
       "slug": "qwen3-8-27b-non-reasoning",
       "intelligence_index": 10,
-      "cost_per_task": 3.7729,
+      "cost_per_task": 4.6287,
       "pricing": {
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3,
@@ -9840,7 +9868,7 @@
         "price_1m_cache_hit_tokens": 0.016,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 89.42,
+      "median_output_tokens_per_second": 91,
       "release_date": "2026-08-26"
     },
     {
@@ -9854,7 +9882,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 40.22,
+      "median_output_tokens_per_second": 40.34,
       "release_date": "2026-09-02"
     },
     {
@@ -9868,7 +9896,7 @@
         "price_1m_cache_hit_tokens": 0.25,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 40.18,
+      "median_output_tokens_per_second": 40.31,
       "release_date": "2026-08-03"
     },
     {
@@ -9910,7 +9938,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 223.98,
+      "median_output_tokens_per_second": 226.51,
       "release_date": "2025-07-31"
     },
     {
@@ -9938,7 +9966,7 @@
         "price_1m_cache_hit_tokens": 0.285,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 82.33,
+      "median_output_tokens_per_second": 79.21,
       "release_date": "2026-02-03"
     },
     {
@@ -10008,7 +10036,7 @@
         "price_1m_cache_hit_tokens": 0.09,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 134.81,
+      "median_output_tokens_per_second": 133.37,
       "release_date": "2025-09-11"
     },
     {
@@ -10036,7 +10064,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 96.72,
+      "median_output_tokens_per_second": 96.18,
       "release_date": "2025-09-22"
     },
     {
@@ -10050,7 +10078,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 101.88,
+      "median_output_tokens_per_second": 100.93,
       "release_date": "2025-09-22"
     },
     {
@@ -10064,7 +10092,7 @@
         "price_1m_cache_hit_tokens": 0.16,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 22.54,
+      "median_output_tokens_per_second": 27.36,
       "release_date": "2025-09-23"
     },
     {
@@ -10204,7 +10232,7 @@
         "price_1m_cache_hit_tokens": 0.075,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 136.52,
+      "median_output_tokens_per_second": 105.76,
       "release_date": "2026-11-16"
     },
     {
@@ -10246,7 +10274,7 @@
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 423.05,
+      "median_output_tokens_per_second": 401.33,
       "release_date": "2026-10-16"
     },
     {
@@ -10274,7 +10302,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 88.96,
+      "median_output_tokens_per_second": 91.35,
       "release_date": "2025-03-10"
     },
     {
@@ -10330,7 +10358,7 @@
         "price_1m_cache_hit_tokens": 0.026,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 460.57,
+      "median_output_tokens_per_second": 401.18,
       "release_date": "2026-03-06"
     },
     {
@@ -10372,7 +10400,7 @@
         "price_1m_cache_hit_tokens": null,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 40.31,
+      "median_output_tokens_per_second": 39.66,
       "release_date": "2025-08-20"
     },
     {
@@ -10400,7 +10428,7 @@
         "price_1m_cache_hit_tokens": 0.01,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 174.96,
+      "median_output_tokens_per_second": 137.83,
       "release_date": "2026-09-22"
     },
     {
@@ -10498,14 +10526,14 @@
         "price_1m_cache_hit_tokens": 0.015,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 162.2,
+      "median_output_tokens_per_second": 158.85,
       "release_date": "2026-04-06"
     },
     {
       "name": "Solar Pro 4",
       "slug": "solar-pro4",
       "intelligence_index": 14.2,
-      "cost_per_task": 0.9557,
+      "cost_per_task": 1.3347,
       "pricing": {
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2,
@@ -10582,7 +10610,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 155.35,
+      "median_output_tokens_per_second": 201.95,
       "release_date": "2026-04-02"
     },
     {
@@ -10596,7 +10624,7 @@
         "price_1m_cache_hit_tokens": 0.02,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 150.03,
+      "median_output_tokens_per_second": 208.98,
       "release_date": "2026-02-02"
     },
     {
@@ -10610,7 +10638,7 @@
         "price_1m_cache_hit_tokens": 0.04,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 198.68,
+      "median_output_tokens_per_second": 205.62,
       "release_date": "2026-05-29"
     },
     {
@@ -10631,14 +10659,14 @@
       "name": "Step 5 Preview",
       "slug": "step-5",
       "intelligence_index": 28.5,
-      "cost_per_task": 2.3453,
+      "cost_per_task": 3.9376,
       "pricing": {
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 2.7,
         "price_1m_cache_hit_tokens": 0.1,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 108.6,
+      "median_output_tokens_per_second": 106.25,
       "release_date": "2026-09-18"
     },
     {
@@ -10652,7 +10680,7 @@
         "price_1m_cache_hit_tokens": 0.042,
         "price_1m_cache_write_tokens": null
       },
-      "median_output_tokens_per_second": 98.51,
+      "median_output_tokens_per_second": 101.41,
       "release_date": "2026-11-03"
     },
     {
